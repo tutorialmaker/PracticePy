@@ -1,7 +1,7 @@
 def coord(x, y):
     """
 
-    関数coordはx, y, zをリストとして返す.
+    関数coordはx, yをリストとして返す.
 
     引数
     x : 数値

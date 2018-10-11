@@ -16,7 +16,7 @@ if __name__ == "__main__":
     type
 
     を, objectの代わりにtype_1からtype_5に一回づつ代入し,
-    (1)から(5)の出力結果をすべてTureにせよ.
+    (1)から(5)の出力結果をすべてTrueにせよ.
 
     """
     type_1 = object

@@ -13,7 +13,10 @@ if __name__ == "__main__":
     float
     int
     str
-    type
+    
+    または関数(引数は各自で設定する)
+    
+    type()
 
     を, objectの代わりにtype_1からtype_5に一回づつ代入し,
     (1)から(5)の出力結果をすべてTrueにせよ.

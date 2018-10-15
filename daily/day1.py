@@ -34,5 +34,5 @@ if __name__ == "__main__":
     type_4 = bool
     print(isinstance(False, type_4)) # (4)
 
-    type_5 = type(empty())
+    type_5 = type(None)
     print(isinstance(empty(), type_5)) # (5)

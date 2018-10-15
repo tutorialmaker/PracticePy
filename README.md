@@ -1,11 +1,21 @@
 # PracticePy
+
 Harder, Better, Faster, Stronger
+
 ## Rules
-- このリポジトリに"<username\>/answer,<username\>/ongoing"の２つのブランチを作成してください。
-  - 問題を解く際は<username\>/ongoingで行い、<username\>/answerに対してPullRequestを送る形で提出をしてください。
-  - 作成例:
-  ![diagram](https://github.com/tutorialmaker/PracticePy/blob/master/diagram.jpg)
-- 解答した問題については必ず記事を書いてください。
-- 問題文中に誤字、脱字が見つかった場合は該当する部分についてのissueを立ててください。
+
+1. 解答者は出題者に問題を解く旨を伝え、出題者はその解答者用のレビュー済みブランチを切る。
+  - レビュー済みブランチ名は"解答者のユーザ名/answer"とする。
+
+2. 解答者はtutorialmakerのリポジトリをフォークして、解答用ブランチを切る。
+  - 解答用ブランチ名は"解答者のユーザ名/ongoing"とする。
+
+3. 解答者は解答用ブランチで解答して、レビュー済みブランチにプルリクエストを送る。プルリクエストのタイトルは解答した問題のタイトルとする。また、プルリクエストの内容に自分の解答の方針を書く。出題者はプルリクエストのコードにレビューをする。出題者からOKが出た際、解答者はプルリクエストの説明、レビュー内容、修正内容を加えたものを記事として[PlayGround](https://playground-i.com/articles/new/)に投稿する。NG,修正が出た際、解答者は修正して再度プルリクエストを送る。
+
+4. 出題者は記事の投稿を確認したのち、解答者用ブランチをレビュー済みブランチにマージする。
+
+![diagram](https://github.com/tutorialmaker/PracticePy/blob/master/diagram.jpg)
+
 ## daily
+
 Pythonの基本的知識、技術を身につけます。Day1から取り組むようにしてください。

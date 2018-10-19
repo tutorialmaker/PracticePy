@@ -15,8 +15,8 @@ def kanto_pokedex():
 
     url = "https://pokeapi.co/api/v2/pokedex/2"
     req = urllib.request.Request(url, headers={"User-Agent": "dummy"})
-    f = urllib.request.urlopen(req)
-    pokemons = json.loads(f.read().decode("utf-8"))["pokemon_entries"]
+    with urllib.request.urlopen(req) as f:
+        pokemons = json.loads(f.read().decode("utf-8"))["pokemon_entries"]
 
     return pokemons
 

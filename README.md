@@ -4,7 +4,7 @@ Harder, Better, Faster, Stronger
 
 ## Rules
 
-1. 解答者は出題者に問題を解く旨を<A href="mailto:info@tkm.blue">info@tkm.blue</a>に送信し、出題者はその解答者用PullRequestの送信先となるブランチを切る。
+1. 解答者は出題者に問題を解くこと、githubのアカウント名を<A href="mailto:info@tkm.blue">info@tkm.blue</a>に送信し、出題者はその解答者用PullRequestの送信先となるブランチを切る。
   - ブランチ名は"解答者のユーザ名/answer"とする。
 
 2. 解答者はtutorialmakerのリポジトリをフォークして、解答用ブランチを切る。

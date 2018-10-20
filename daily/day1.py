@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 def empty():
     pass
 
@@ -38,7 +36,3 @@ if __name__ == "__main__":
 
     type_5 = type(empty())
     print(isinstance(empty(), type_5)) # (5)
-
-
-
-    print(type(empty()))

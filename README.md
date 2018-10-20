@@ -4,7 +4,7 @@ Harder, Better, Faster, Stronger
 
 ## Rules
 
-1. 解答者は出題者に問題を解く旨を伝え、出題者はその解答者用のレビュー済みブランチを切る。
+1. 解答者は出題者に問題を解く旨を<A href="mailto:info@tkm.blue">info@tkm.blue</a>に送信し、出題者はその解答者用のレビュー済みブランチを切る。
   - レビュー済みブランチ名は"解答者のユーザ名/answer"とする。
 
 2. 解答者はtutorialmakerのリポジトリをフォークして、解答用ブランチを切る。

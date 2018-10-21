@@ -28,11 +28,23 @@ if __name__ == "__main__":
     """
 
     関数get_pokemon_dataを用いて,
-    キーにポケモンの名称、バリューにそのポケモンのBMIを持つ辞書を作成せよ.
-    またBMIが高い順に並んだ順序付き辞書を作成せよ.
+    以下に示すような, キーにポケモンの名称、バリューにそのポケモンの重量を持つ辞書を作成せよ.
 
-    ただしポケモンの名称および重量および高さは, 関数get_pokemon_dataの返り値において,
-    バリューとしてキー"name"および"weight"および"height"に対応しており,
-    "weight"および"height"の値の単位はそれぞれ0.1メートルおよび0.1キログラムである.
+    {
+        'bulbasaur': 69, 'ivysaur': 130, 'venusaur': 1000,
+        'charmander': 85, 'charmeleon': 190, 'charizard': 905,
+        'squirtle': 90, 'wartortle': 225, 'blastoise': 855
+    }
+
+    さらに以下に示すような, 重量が重い順に並んだ順序付き辞書を作成せよ.
+
+    OrderedDict([
+        ('venusaur', 1000), ('charizard', 905), ('blastoise', 855),
+        ('wartortle', 225), ('charmeleon', 190), ('ivysaur', 130),
+        ('squirtle', 90), ('charmander', 85), ('bulbasaur', 69)
+        ])
+
+    ただしポケモンの名称および重量は, 関数get_pokemon_dataの返り値において,
+    バリューとしてキー"name"および"weight"に対応している.
 
     """

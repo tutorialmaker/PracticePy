@@ -19,3 +19,7 @@ Harder, Better, Faster, Stronger
 ## daily
 
 Pythonの基本的知識、技術を身につけます。Day1から取り組むようにしてください。
+
+## weekly
+
+Pythonを用いた実践的なことを行います。dailyよりも難易度が比較的高くなっています。

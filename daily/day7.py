@@ -26,13 +26,14 @@ def get_pokemon_data_sp(n):
 if __name__ == "__main__":
     """
 
-    関数get_pokemon_data_spを用いて、
-    ポケモンの分類(genera)、名前(names)に関するクラスを作成してください。
-    また、引数に言語コードをとり、その言語コードにおけるポケモンの分類、名前を返すメソッドを定義してください。
-    クラス名はPokemonI18n,メソッド名は分類->group、名前->nameとしてください。
+    関数get_pokemon_data_spをコンストラクタに用い、
+    ポケモンの分類(genera)、名前(names)に関するクラス_PokemonI18n_を作成してください。
+    このクラスでは引数に言語コードをとり、その言語コードにおけるポケモンの分類、名前を返すメソッドを定義してください。
+    メソッド名は分類->group、名前->nameとしてください。
     ただし、引数の言語コードは、APIから取得できる言語しか与えられないことを想定して構いません。
 
-    また、ポケモンの名前(name)をkey,作成したクラスをvalueとする図鑑番号1~15の辞書を作成してください。
+    また、図鑑番号1~15の範囲で、図鑑番号に対応した情報を返すリストを作成してください。
+    図鑑の先頭(index=0)は呼び出されないものと仮定して空文字にしてください。
 
     この課題ではAPIから取得されるデータのキーに関する情報は最低限しか与えられません。
     まずはhttps://pokeapi.co/api/v2/pokemon-species/1
@@ -40,7 +41,7 @@ if __name__ == "__main__":
 
     """
 
-    # print(pokemon_info['bulbasaur'].name('en')) # Bulbasaur
-    # print(pokemon_info['bulbasaur'].group('de')) # Samen
-    # print(pokemon_info['ivysaur'].name('roomaji')) # Fushigisou
-    # print(pokemon_info['ivysaur'].group('fr')) # Pokémon Graine
+    # print(pokemon_info[1].name('en')) # Bulbasaur
+    # print(pokemon_info[1].group('de')) # Samen
+    # print(pokemon_info[2].name('roomaji')) # Fushigisou
+    # print(pokemon_info[2].group('fr')) # Pokémon Graine

@@ -28,7 +28,7 @@ def manhattan_dist(coord1, coord2):
     coord2: List[Union[int, float]]
 
     返り値
-    distance: Uniton[int, float]
+    distance: Union[int, float]
 
     """
     pass

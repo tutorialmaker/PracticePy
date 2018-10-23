@@ -8,13 +8,13 @@ def make_dict(keys, values):
     values: Iterable[Any]
 
     返り値
-    dict: Dict[Any, Any]
+    d: Dict[Any, Any]
 
     """
 
-    dict = dict(zip(keys, values))
+    d = dict(zip(keys, values))
 
-    return dict
+    return d
 
 
 def break_dict(d):

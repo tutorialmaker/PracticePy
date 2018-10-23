@@ -21,7 +21,7 @@ def manhattan_dist(coord1, coord2):
     """
 
     coord1とcoord2はどちらも長さ2のリストが与えられるとする.
-    ふたつのリストを座標とみなし、距離(distance)を返す関数manhattan_distを作成せよ.
+    ふたつのリストを座標とみなし、マンハッタン距離を返す関数manhattan_distを作成せよ.
 
     引数
     coord1: List[Union[int, float]]

@@ -9,13 +9,13 @@ def get_pokemon_data_sp(n):
     ずかん番号に対応するポケモンの図鑑情報を返す.
 
     引数
-    n : 整数
+    n : int
 
     返り値
-    data : 辞書
+    data : Dict[Any, Any]
 
     """
-    url = 'https://pokeapi.co/api/v2/pokemon-species/{}/'.format(n)
+    url = f'https://pokeapi.co/api/v2/pokemon-species/{n}/'
     req = urllib.request.Request(url, headers={"User-Agent": "dummy"})
     with urllib.request.urlopen(req) as f:
         data = json.loads(f.read().decode("utf-8"))

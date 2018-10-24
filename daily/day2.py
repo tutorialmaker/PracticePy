@@ -4,36 +4,36 @@ def coord(x, y):
     関数coordはx, yをリストとして返す.
 
     引数
-    x : 数値
-    y : 数値
+    x: Union[int, float]
+    y: Union[int, float]
 
     返り値
-    c : リスト
+    result: List[Union[int, float]]
 
     """
 
-    c = [x, y]
+    result = [x, y]
 
-    return c
+    return result
 
 
 def manhattan_dist(coord1, coord2):
     """
 
     coord1とcoord2はどちらも長さ2のリストが与えられるとする.
-    ふたつのリストを座標とみなし、L1距離を返す関数manhattan_distを作成せよ.
+    ふたつのリストを座標とみなし、マンハッタン距離を返す関数manhattan_distを作成せよ.
 
     引数
-    coord1 : リスト
-    coord2 : リスト
+    coord1: List[Union[int, float]]
+    coord2: List[Union[int, float]]
 
     返り値
-    l1 : 数値
+    distance: Union[int, float]
 
     """
     pass
 
-    # return l1
+    # return distance
 
 
 if __name__ == "__main__":

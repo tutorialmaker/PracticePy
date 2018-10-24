@@ -9,7 +9,7 @@ def kanto_pokedex():
     ずかん番号1から151に対応するポケモンの情報を返す.
 
     返り値
-    pokemons : リスト
+    pokemons : List[Any]
 
     """
 
@@ -18,6 +18,7 @@ def kanto_pokedex():
     with urllib.request.urlopen(req) as f:
         pokemons = json.loads(f.read().decode("utf-8"))["pokemon_entries"]
 
+    # TODO: 副作用がある動作なのでrequest失敗時のハンドリングにも触れるべき
     return pokemons
 
 

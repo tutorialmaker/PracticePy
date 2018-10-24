@@ -1,14 +1,14 @@
 def make_dict(keys, values):
     """
 
-    関数make_dictはkeys, valuesより辞書を作成し辞書を返す.
+    関数make_dictはkeys, valuesより辞書(ハッシュと呼ぶこともある)を作成し辞書を返す.
 
     引数
-    keys : イテラブルオブジェクト
-    values : イテラブルオブジェクト
+    keys: Iterable[Any]
+    values: Iterable[Any]
 
     返り値
-    d : 辞書
+    d: Dict[Any, Any]
 
     """
 
@@ -23,11 +23,11 @@ def break_dict(d):
     dのキーをkeys, バリューをvaluesというリストで返す関数break_dictを作成せよ.
 
     引数
-    d : 辞書
+    d: Dict[Any, Any]
 
     返り値
-    keys : リスト
-    values : リスト
+    keys: List[Any]
+    values: List[Any]
 
     """
 

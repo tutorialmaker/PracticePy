@@ -13,7 +13,7 @@ if __name__ == "__main__":
     float
     int
     str
-    
+
     または関数(引数は各自で設定する)
     
     type()

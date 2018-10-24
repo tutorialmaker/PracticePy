@@ -31,7 +31,7 @@ def manhattan_dist(coord1, coord2):
     l1 : 数値
 
     """
-    pass
+    return abs(A[0]-B[0]) + abs(A[1]-B[1])
 
     # return l1
 

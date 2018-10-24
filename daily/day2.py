@@ -33,9 +33,9 @@ def manhattan_dist(coord1, coord2):
     """
 
 
-    #l1 =abs(coord1[0]-coord2[0]) + abs(coord1[1]-coord2[1])
+    l1 =abs(coord1[0]-coord2[0]) + abs(coord1[1]-coord2[1])
 
-    #return l1
+    return l1
 
 
 if __name__ == "__main__":

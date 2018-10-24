@@ -31,11 +31,8 @@ def manhattan_dist(coord1, coord2):
     l1 : 数値
 
     """
-<<<<<<< HEAD
+
     l1 =abs(coord1[0]-coord2[0]) + abs(coord1[1]-coord2[1])
-=======
-    pass
->>>>>>> parent of 205ec1c... day2
 
     return l1
 

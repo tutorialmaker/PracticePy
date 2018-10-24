@@ -31,9 +31,9 @@ def break_dict(d):
 
     """
 
-    pass
-
-    # return keys, values
+    keys = [ key for key in d.values() ]
+    values = [ value for value in d.keys() ]
+    return keys, values
 
 
 if __name__ == "__main__":

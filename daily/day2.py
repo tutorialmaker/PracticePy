@@ -31,13 +31,9 @@ def manhattan_dist(coord1, coord2):
     l1 : 数値
 
     """
-    man1 = abs(coord1[0] - coord2[0])
-    man2 = abs(coord1[1] - coord2[1])
-    l1 = man1 + man2
-    return l1
     pass
 
-    #return l1
+    # return l1
 
 
 if __name__ == "__main__":

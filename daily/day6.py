@@ -5,9 +5,15 @@ if __name__ == "__main__":
     day5で用いられた関数get_pokemon_dataを用いて,
 
     {
-    'bulbasaur': 7, 'ivysaur': 10, 'venusaur': 20,
-    'charmander': 6, 'charmeleon': 11, 'charizard': 17,
-    'squirtle': 5, 'wartortle': 10, 'blastoise': 16
+        'bulbasaur': 7,
+        'ivysaur': 10,
+        'venusaur': 20,
+        'charmander': 6,
+        'charmeleon': 11,
+        'charizard': 17,
+        'squirtle': 5,
+        'wartortle': 10,
+        'blastoise': 16
     }
 
     といったポケモンの名前,高さの辞書を作成してください。
@@ -19,10 +25,13 @@ if __name__ == "__main__":
     辞書の名前はchibiesにしてください。
 
     {
-    'bulbasaur': 7, 'ivysaur': 10, 'charmander': 6,
-    'squirtle': 5, 'wartortle': 10, 'caterpie': 3,
-    ...
-    'sandshrew': 6, 'sandslash': 10, 'nidoran-f': 4
+        'bulbasaur': 7,
+        'ivysaur': 10,
+        'charmander': 6,
+        ...
+        'sandshrew': 6,
+        'sandslash': 10,
+        'nidoran-f': 4
     }
 
     0.1m = 1であることに注意してください。

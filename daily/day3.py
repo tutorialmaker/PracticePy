@@ -31,8 +31,8 @@ def break_dict(d):
 
     """
 
-    keys = [ key for key in d.values() ]
-    values = [ value for value in d.keys() ]
+    keys = [ key for key in d.keys() ]
+    values = [ value for value in d.values() ]
     return keys, values
 
 

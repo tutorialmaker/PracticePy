@@ -16,7 +16,7 @@ Harder, Better, Faster, Stronger
 
 4. 解答者は書いた記事のURLを、出題者にプルリクエストのコメント等で報告する。出題者は記事の投稿を確認したのち、解答者用ブランチをレビュー済みブランチにマージする。
 
-![diagram](https://github.com/tutorialmaker/PracticePy/blob/master/diagram.jpg)
+![diagram](https://github.com/tutorialmaker/PracticePy/blob/readme/diagram.jpg)
 
 ## daily
 

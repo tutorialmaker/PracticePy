@@ -16,27 +16,10 @@ def coord(x, y):
 
     return c
 
-
-def manhattan_dist(coord1, coord2):
-    """
-
-    coord1とcoord2はどちらも長さ2のリストが与えられるとする.
-    ふたつのリストを座標とみなし、L1距離を返す関数manhattan_distを作成せよ.
-
-    引数
-    coord1 : リスト
-    coord2 : リスト
-
-    返り値
-    l1 : 数値
-
-    """
-    pass
     
 def manhattan_dist(coord1, coord2):
     l1 = abs(coord1[0]-coord2[0])+abs(coord1[1]-coord2[1])
     return l1
-    # return l1
 
 
 if __name__ == "__main__":

@@ -1,4 +1,5 @@
 import urllib.request
+import urllib.error
 import json
 import collections
 
@@ -18,11 +19,12 @@ def get_pokemon_data(n):
     """
     url = f'https://pokeapi.co/api/v2/pokemon/{n}/'
     req = urllib.request.Request(url, headers={"User-Agent": "dummy"})
-    with urllib.request.urlopen(req) as f:
-        data = json.loads(f.read().decode("utf-8"))
-
-    # TODO: ref - day4
-    return data
+    try:
+        with urllib.request.urlopen(req) as f:
+            data = json.loads(f.read().decode("utf-8"))
+        return data
+    except urllib.error.URLError:
+        print("\nError: The requested URL could not be retrived. Are you connected to the Internet?\n")
 
 
 if __name__ == "__main__":

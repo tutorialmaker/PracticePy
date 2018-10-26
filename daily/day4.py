@@ -1,4 +1,5 @@
 import urllib.request
+import urllib.error
 import json
 
 
@@ -19,7 +20,7 @@ def kanto_pokedex():
         with urllib.request.urlopen(req) as f:
             pokemons = json.loads(f.read().decode("utf-8"))["pokemon_entries"]
         return pokemons
-    except URLError:
+    except urllib.error.URLError:
         print("\nError: The requested URL could not be retrived. Are you connected to the Internet?\n")
 
 

@@ -18,8 +18,8 @@ def make_dict(keys, values):
 
 
 def break_dict(d):
-    keys = d.keys()
-    values = d.values()
+    keys = [k for k in d.keys()]
+    values = [v for v in d.values()]
     return keys, values
 
     """

@@ -15,11 +15,12 @@ def kanto_pokedex():
 
     url = "https://pokeapi.co/api/v2/pokedex/2"
     req = urllib.request.Request(url, headers={"User-Agent": "dummy"})
-    with urllib.request.urlopen(req) as f:
-        pokemons = json.loads(f.read().decode("utf-8"))["pokemon_entries"]
-
-    # TODO: 副作用がある動作なのでrequest失敗時のハンドリングにも触れるべき
-    return pokemons
+    try:
+        with urllib.request.urlopen(req) as f:
+            pokemons = json.loads(f.read().decode("utf-8"))["pokemon_entries"]
+        return pokemons
+    except URLError:
+        print("\nError: The requested URL could not be retrived. Are you connected to the Internet?\n")
 
 
 if __name__ == "__main__":

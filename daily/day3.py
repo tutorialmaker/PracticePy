@@ -30,10 +30,9 @@ def break_dict(d):
     values: List[Any]
 
     """
-
-    pass
-
-    # return keys, values
+    keys = [ key for key in d.keys() ]
+    values = [ value for value in d.values() ]
+    return keys, values
 
 
 if __name__ == "__main__":

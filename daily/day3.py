@@ -18,10 +18,6 @@ def make_dict(keys, values):
 
 
 def break_dict(d):
-    keys = [k for k in d.keys()]
-    values = [v for v in d.values()]
-    return keys, values
-
     """
 
     dのキーをkeys, バリューをvaluesというリストで返す関数break_dictを作成せよ.
@@ -34,6 +30,10 @@ def break_dict(d):
     values: List[Any]
 
     """
+
+    pass
+
+    # return keys, values
 
 
 if __name__ == "__main__":

@@ -22,11 +22,12 @@ def kanto_pokedex():
 
 
 if __name__ == "__main__":
+    pokemon_dict_list = [x["pokemon_species"] for x in kanto_pokedex()]
+    pokemon_name = [k["name"] for k in pokemon_dict_list]
+    print(pokemon_name)
     """
 
     関数kanto_pokedexを用いて,
     ずかん番号1から151に対応するポケモンの名称をリストpokemon_nameに格納せよ.
 
     """
-
-    # print(pokemon_name)

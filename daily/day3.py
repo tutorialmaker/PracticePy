@@ -30,10 +30,11 @@ def break_dict(d):
     values : リスト
 
     """
-
+    keys = [k for k in d.keys()]
+    values = [v for v in d.values()]
     pass
 
-    # return keys, values
+    return keys, values
 
 
 if __name__ == "__main__":

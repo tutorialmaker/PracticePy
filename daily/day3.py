@@ -30,7 +30,6 @@ def break_dict(d):
     values : リスト
 
     """
-    
     pass
 
     return keys, values

@@ -31,6 +31,7 @@ class Person:
 
         **options :
             titleは登録する人物の肩書きで,
+            titleが与えられていない場合, titleは'Esq'を与える.
             genderが与えられてtitleが与えられていない場合,
             genderが'Man'であるならば'Mr', 'Woman'であるならば'Ms',
             それ以外ならば'Esq'を与える.

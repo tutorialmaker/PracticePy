@@ -13,9 +13,9 @@ if __name__ == "__main__":
     float
     int
     str
-    
+
     または関数(引数は各自で設定する)
-    
+
     type()
 
     を, objectの代わりにtype_1からtype_5に一回づつ代入し,
@@ -23,16 +23,16 @@ if __name__ == "__main__":
 
     """
     type_1 = object
-    print(isinstance(0, type_1)) # (1)
+    print(isinstance(0, type_1))  # (1)
 
     type_2 = object
-    print(isinstance(0., type_2)) # (2)
+    print(isinstance(0., type_2))  # (2)
 
     type_3 = object
-    print(isinstance("0", type_3)) # (3)
+    print(isinstance("0", type_3))  # (3)
 
     type_4 = object
-    print(isinstance(False, type_4)) # (4)
+    print(isinstance(False, type_4))  # (4)
 
     type_5 = object
-    print(isinstance(empty(), type_5)) # (5)
+    print(isinstance(empty(), type_5))  # (5)

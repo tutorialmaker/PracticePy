@@ -35,6 +35,13 @@ def manhattan_dist(coord1, coord2):
 
     # return l1
 
+    x = abs(coord1[0]-coord2[0])
+    y = abs(coord1[1]-coord2[1])
+    list = []
+    list.append(x)
+    list.append(y)
+    return x+y
+
 
 if __name__ == "__main__":
     x = float(input("Input a x = "))

@@ -1,7 +1,6 @@
 import urllib.request
 import urllib.error
 import json
-import collections
 
 
 def get_pokemon_data(n):
@@ -24,7 +23,8 @@ def get_pokemon_data(n):
             data = json.loads(f.read().decode("utf-8"))
         return data
     except urllib.error.URLError:
-        print("\nError: The requested URL could not be retrived. Are you connected to the Internet?\n")
+        print("\nError: The requested URL could not be retrived. \
+                        Are you connected to the Internet?\n")
 
 
 if __name__ == "__main__":

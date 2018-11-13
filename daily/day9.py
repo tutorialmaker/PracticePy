@@ -13,11 +13,10 @@ if __name__ == '__main__':
     inverted_map_2 = map(lambda num: num * -1, nums)
 
     # 3, mapを使わなくてもpythonにはリスト内包というものがあります
-    inverted_map_3 = [ num * -1 for num in nums ]
-    
+    inverted_map_3 = [num * -1 for num in nums]
+
     # 4, ジェネレータ内包表記もあります
-    
-    inverted_map_4 = ( num * -1 for num in nums )
+    inverted_map_4 = (num * -1 for num in nums)
 
     # python3ではmap objectは遅延評価
     print(list(inverted_map_1))
@@ -25,28 +24,27 @@ if __name__ == '__main__':
 
     # inveted_map_3はリストなので遅延評価ではない
     print(inverted_map_3)
-    
+
     # inverted_map_4は遅延評価
     print(list(inverted_map_4))
 
     # mapは元の配列に変化は起こしません
     print(list(nums))
 
-
     # TODO: 30~100までの数字の配列(num2)を作り
     # 上記1, 2, 3, 4の方法に習い、それぞれ100を引いてみてください
     # ただしnum2の中身は変更しないようにしてください。
 
-    #nums_2 =
-    #print(list(nums))
+    # nums_2 =
+    # print(list(nums))
 
-    #hundredfold_map_1 =
-    #hundredfold_map_2 =
-    #hundredfold_map_3 =
-    #hundredfold_map_4 =
+    # hundredfold_map_1 =
+    # hundredfold_map_2 =
+    # hundredfold_map_3 =
+    # hundredfold_map_4 =
 
-    #print(list(hundredfold_map_1))
-    #print(list(hundredfold_map_2))
-    #print(hundredfold_map_3)
-    #print(list(hundredfold_map_4))
-    #print(num_2)
+    # print(list(hundredfold_map_1))
+    # print(list(hundredfold_map_2))
+    # print(hundredfold_map_3)
+    # print(list(hundredfold_map_4))
+    # print(num_2)

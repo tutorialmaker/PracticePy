@@ -1,6 +1,6 @@
 import urllib.request
 import json
-import collections
+
 
 def get_pokemon_data_sp(n):
     """

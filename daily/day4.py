@@ -30,6 +30,6 @@ if __name__ == "__main__":
 
     """
     pokemon_name = []
-    for x in kanto_pokedex():
-        pokemon_name.append(x ["pokemon_species"]["name"])
+    for pocket_monster in kanto_pokedex():
+        pokemon_name.append(pocket_monster["pokemon_species"]["name"])
     print(pokemon_name)

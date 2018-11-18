@@ -1,4 +1,5 @@
 ---
+title: イベント名
 name: イベントの開催
 about: 解答者はイベントを開催できる.
 labels: event

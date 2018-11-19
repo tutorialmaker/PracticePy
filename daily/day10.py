@@ -28,13 +28,6 @@ import sys
 import socket
 
 
-# -*-*-*-*-*- インターネット層 -*-*-*-*-*-
-# プロトコルはIPv4(Internet Protocol version 4)を用いる.
-FAMILY = socket.AF_INET
-# サーバのIPアドレスは127.0.0.1とする.
-HOST = "127.0.0.1"
-# -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
-
 # -*-*-*-*-*- トランスポート層 -*-*-*-*-*-
 # プロトコルはTCP(Transmission Control Protocol)を用いる.
 PROTO = socket.IPPROTO_TCP
@@ -47,6 +40,13 @@ TYPE = socket.SOCK_STREAM
 # HTTPというプロトコルのポート番号は80と定められている.
 # 今回はアプリケーションのポート番号に12345を割り当てる.
 PORT = 12345
+# -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+
+# -*-*-*-*-*- インターネット層 -*-*-*-*-*-
+# プロトコルはIPv4(Internet Protocol version 4)を用いる.
+FAMILY = socket.AF_INET
+# サーバのIPアドレスは127.0.0.1とする.
+HOST = "127.0.0.1"
 # -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
 
 

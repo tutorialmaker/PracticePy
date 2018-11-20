@@ -2,4 +2,6 @@
 
 Harder Better Faster Stronger
 
-👉　[Wiki](https://github.com/tutorialmaker/PracticePy/wiki)
+👉 [PracticePy](https://github.com/tutorialmaker/PracticePy/wiki#practicepy)
+
+👉 [PracticeParty](https://github.com/tutorialmaker/PracticePy/wiki#practiceparty)

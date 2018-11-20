@@ -13,7 +13,6 @@ if __name__ == "__main__":
     brank3 = None
     print(f"intはobjectのサブクラスか？ -> {brank1}")
     print(f"Sampleはobjectのサブクラスか？ -> {brank2}")
-    print(f"objectはobjectのサブクラスか？ -> {brank3}")
 
     print("_"*40)
 

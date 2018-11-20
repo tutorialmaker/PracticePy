@@ -38,7 +38,6 @@ if __name__ == "__main__":
 
     print("intのオブジェクトを動的に生成する.")
     one = int("1")
-    print(f"{one}の型は{type(one)}である.")
 
     print("_"*40)
 

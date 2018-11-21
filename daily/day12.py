@@ -4,13 +4,12 @@ class Sample:
 
 if __name__ == "__main__":
 
-    # 以下に定義する変数brank1からbrank6に, 文脈上適切な関数を用いてオブジェクトを与えよ.
+    # 以下に定義する変数brank1からbrank5に, 文脈上適切な関数を用いてオブジェクトを与えよ.
 
     # Pythonではすべてのクラスは, objectの直接的あるいは間接的なサブクラスである.
 
     brank1 = None
     brank2 = None
-    brank3 = None
     print(f"{int.__name__}は{object.__name__}のサブクラスか？ -> {brank1}")
     print(f"{Sample.__name__}は{object.__name__}のサブクラスか？ -> {brank2}")
 
@@ -19,18 +18,18 @@ if __name__ == "__main__":
     # Pythonではすべてのクラスはオブジェクトである.
     # クラスがオブジェクトであるならば, 型が存在する.
 
-    brank4 = None
-    print(f"{object.__name__}の型は何か？ -> {brank4}")
+    brank3 = None
+    print(f"{object.__name__}の型は何か？ -> {brank3}")
 
     print("_"*40)
 
     # また, brank4はobjectの型であるが, objectのサブクラスでもある.
     # ただし当然ながら, objectはbrank4のサブクラスではない.
 
+    brank4 = None
+    print(f"{brank3}は{object.__name__}のサブクラスか？ -> {brank4}")
     brank5 = None
-    print(f"{brank4}は{object.__name__}のサブクラスか？ -> {brank5}")
-    brank6 = None
-    print(f"{object.__name__}は{brank4}のサブクラスか？ -> {brank6}")
+    print(f"{object.__name__}は{brank3}のサブクラスか？ -> {brank5}")
 
     print("_"*40)
 

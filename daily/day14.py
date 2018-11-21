@@ -17,9 +17,9 @@
         min = mouse.monster("Min")
         don = duck.monster("Doc")
 
-        mic.get_monster(HP=300, ATK=200, DEF=100)
-        min.get_monster(HP=200, ATK=300, DEF=100)
-        don.get_monster(HP=100, ATK=100, DEF=50)
+        mic.set(HP=300, ATK=200, DEF=100)
+        min.set(HP=200, ATK=300, DEF=100)
+        don.set(HP=100, ATK=100, DEF=50)
 
         print("\n///Before Buttle.///\n")
         book.show()
@@ -47,7 +47,7 @@ class SpeciesBook:
     def __init__(self):
         self._status = {}
 
-    def get_new_species(self, species):
+    def set_species(self, species):
         """新しい種族を追加する
 
         Parameters
@@ -59,7 +59,7 @@ class SpeciesBook:
         """
         self._status[species] = {}
 
-    def get_monster(self, species, name, *, HP, ATK, DEF):
+    def set_monster(self, species, name, *, HP, ATK, DEF):
         """新しいモンスターを追加する
 
         Parameters
@@ -139,11 +139,11 @@ class SpeciesBook:
 if __name__ == "__main__":
     book = SpeciesBook()
 
-    book.get_new_species("Mouse")
-    book.get_monster("Mouse", "Mic", HP=300, ATK=200, DEF=100)
-    book.get_monster("Mouse", "Min", HP=200, ATK=300, DEF=100)
-    book.get_new_species("Duck")
-    book.get_monster("Duck", "Don", HP=100, ATK=100, DEF=50)
+    book.set_species("Mouse")
+    book.set_monster("Mouse", "Mic", HP=300, ATK=200, DEF=100)
+    book.set_monster("Mouse", "Min", HP=200, ATK=300, DEF=100)
+    book.set_species("Duck")
+    book.set_monster("Duck", "Don", HP=100, ATK=100, DEF=50)
 
     print("\n///Before Buttle.///\n")
     book.show()

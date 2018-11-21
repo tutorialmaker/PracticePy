@@ -11,8 +11,8 @@ if __name__ == "__main__":
     brank1 = None
     brank2 = None
     brank3 = None
-    print(f"intはobjectのサブクラスか？ -> {brank1}")
-    print(f"Sampleはobjectのサブクラスか？ -> {brank2}")
+    print(f"{int.__name__}は{object.__name__}のサブクラスか？ -> {brank1}")
+    print(f"{Sample.__name__}は{object.__name__}のサブクラスか？ -> {brank2}")
 
     print("_"*40)
 
@@ -20,7 +20,7 @@ if __name__ == "__main__":
     # クラスがオブジェクトであるならば, 型が存在する.
 
     brank4 = None
-    print(f"objectの型は何か？ -> {brank4}")
+    print(f"{object.__name__}の型は何か？ -> {brank4}")
 
     print("_"*40)
 
@@ -28,15 +28,15 @@ if __name__ == "__main__":
     # ただし当然ながら, objectはbrank4のサブクラスではない.
 
     brank5 = None
-    print(f"{brank4}はobjectのサブクラスか？ -> {brank5}")
+    print(f"{brank4}は{object.__name__}のサブクラスか？ -> {brank5}")
     brank6 = None
-    print(f"objectは{brank4}のサブクラスか？ -> {brank6}")
+    print(f"{object.__name__}は{brank4}のサブクラスか？ -> {brank6}")
 
     print("_"*40)
 
     # ところで, 組み込み関数intを用いることで, intのオブジェクトを動的に生成できる.
 
-    print("intのオブジェクトを動的に生成する.")
+    print(f"{int.__name__}のオブジェクトを動的に生成する.")
     one = int("1")
 
     print("_"*40)

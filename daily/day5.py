@@ -58,3 +58,4 @@ if __name__ == "__main__":
                 s = sorted(dic.items(), key=lambda x:-x[1])
         return dict(s)
     print(dict_sorted(3))
+    

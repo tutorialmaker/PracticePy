@@ -33,7 +33,7 @@ if __name__ == "__main__":
     "weight"および"height"の値の単位はそれぞれ0.1メートルおよび0.1キログラムである.
     """
     d = {}
-    for i in range(1, 5):
+    for i in range(1, 152):
         get = get_pokemon_data(i)
         name = get["name"]
         weight = get["weight"]
@@ -47,7 +47,7 @@ if __name__ == "__main__":
     print(d_sorted)
     def dict_sorted(n):
         dic = {}
-        for t in range(1, 5):
+        for t in range(1, 152):
             get = get_pokemon_data(t)
             name = get["name"]
             weight = get["weight"]
@@ -58,4 +58,3 @@ if __name__ == "__main__":
                 s = sorted(dic.items(), key=lambda x:-x[1])
         return dict(s)
     print(dict_sorted(3))
-    

@@ -32,11 +32,10 @@ if __name__ == "__main__":
 
     """
     pokemons = kanto_pokedex()
-    pokemon_name = {}
+    pokemon_name = []
     for poke in pokemons:
-        key = poke['entry_number']
         specie = poke['pokemon_species']
         value = specie['name']
-        pokemon_name[key] = value
+        pokemon_name.append(value)
 
     print(pokemon_name)

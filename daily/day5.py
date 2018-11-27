@@ -32,19 +32,43 @@ if __name__ == "__main__":
     バリューとしてキー"name"および"weight"および"height"に対応しており,
     "weight"および"height"の値の単位はそれぞれ0.1メートルおよび0.1キログラムである.
     """
+    n = int(input())
     d = {}
-    for i in range(1, 152):
+    dic = {}
+    for i in range(1, 5):
         get = get_pokemon_data(i)
         name = get["name"]
         weight = get["weight"]
         height = get["height"]
         bmi = weight / (height**2)
         d[name] = bmi
+        if bmi < n:
+            dic[name] = bmi
+            s = dict(sorted(dic.items(), key=lambda x:-x[1]))
+    d_sorted = dict(sorted(d.items(), key=lambda x: -x[1]))
+    def dict_sorted(n):
+        return s
     print(d)
-    d_sorted = {}
-    for k, v in sorted(d.items(), key=lambda x: -x[1]):
-        d_sorted[k] = v
     print(d_sorted)
+    print(dict_sorted(n))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    """
     def dict_sorted(n):
         dic = {}
         for t in range(1, 152):
@@ -58,3 +82,4 @@ if __name__ == "__main__":
                 s = sorted(dic.items(), key=lambda x:-x[1])
         return dict(s)
     print(dict_sorted(3))
+    """

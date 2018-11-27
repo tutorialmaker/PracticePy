@@ -31,9 +31,11 @@ def manhattan_dist(coord1, coord2):
     l1 : 数値
 
     """
-    pass
+    # pass
+    dist = [abs(c1-c2) for c1, c2 in zip(coord1, coord2)]
+    l1 = sum(dist)
 
-    # return l1
+    return l1
 
 
 if __name__ == "__main__":

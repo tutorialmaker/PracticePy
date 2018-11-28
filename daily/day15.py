@@ -18,9 +18,9 @@ import http.server
 import socketserver
 
 
-# -*-*-*-*-*- インターネット層 -*-*-*-*-*-
-# プロトコルはIPv4(Internet Protocol version 4)を用いる.
-HOST = "127.0.0.1"
+# -*-*-*-*-*- アプリケーション層 -*-*-*-*-*-
+# プロトコルはHTTP(Hypertext Transfer Protocol)を用いる.
+Handler = http.server.BaseHTTPRequestHandler
 # -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
 
 # -*-*-*-*-*- トランスポート層 -*-*-*-*-*-
@@ -29,9 +29,9 @@ Server = socketserver.TCPServer
 PORT = 54321
 # -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
 
-# -*-*-*-*-*- アプリケーション層 -*-*-*-*-*-
-# プロトコルはHTTP(Hypertext Transfer Protocol)を用いる.
-Handler = http.server.BaseHTTPRequestHandler
+# -*-*-*-*-*- インターネット層 -*-*-*-*-*-
+# プロトコルはIPv4(Internet Protocol version 4)を用いる.
+HOST = "127.0.0.1"
 # -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
 
 

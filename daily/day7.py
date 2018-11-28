@@ -39,7 +39,7 @@ if __name__ == "__main__":
     # mypkdのゲッターを用いて, _pokemonsを取得する.
     pokemons = mypkd.pokemons
 
-    # 取得したポケモンの名称を出力する.
+    # 取得した辞書からずかん番号numberのポケモンの名称を出力する.
     print(pokemons[number]["name"])
 
     # キーがnumberのオブジェクトを削除する.

@@ -4,7 +4,8 @@ class Sample:
 
 if __name__ == "__main__":
 
-    # 以下に定義する変数brank1からbrank5に, 文脈上適切な関数を用いてオブジェクトを与えよ.
+    # 以下に定義する変数brank1からbrank7に, 文脈上適切な関数を用いてオブジェクトを与えよ.
+    # ただし, 必要に応じてモジュールをインポートしてよい.
 
     # Pythonではすべてのクラスは, objectの直接的あるいは間接的なサブクラスである.
 
@@ -30,6 +31,21 @@ if __name__ == "__main__":
     print(f"{brank3}は{object.__name__}のサブクラスか？ -> {brank4}")
     brank5 = None
     print(f"{object.__name__}は{brank3}のサブクラスか？ -> {brank5}")
+
+    print("_"*40)
+
+    # ところで, int, floatそしてcomplexはいずれも数の型であり,
+    # 四則演算など多くの共通のインターフェースを持つが,
+    # (object以外の)共通の基底クラスを継承している訳ではない.
+    # その代わり, 数の抽象基底クラスが定義されている.
+    # ゆえにオブジェクトが数であるかどうかは,
+    # この抽象基底クラスを用いて判定することができる.
+
+    brank6 = None
+    print(f"{int.__name__}, {float.__name__}そして{complex.__name__}は"\
+            f"({object.__name__}以外の)共通の基底クラスを継承しているか? -> {brank6}")
+    brank7 = None
+    print(f"{1+3j}は数か? -> {brank7}")
 
     print("_"*40)
 

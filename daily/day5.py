@@ -1,7 +1,7 @@
 import urllib.request
 import json
 import collections
-
+from collections import OrderedDict
 
 def get_pokemon_data(n):
     """
@@ -32,54 +32,27 @@ if __name__ == "__main__":
     バリューとしてキー"name"および"weight"および"height"に対応しており,
     "weight"および"height"の値の単位はそれぞれ0.1メートルおよび0.1キログラムである.
     """
-    n = int(input())
-    d = {}
-    dic = {}
+    bmi_dict = OrderedDict()
     for i in range(1, 5):
-        get = get_pokemon_data(i)
-        name = get["name"]
-        weight = get["weight"]
-        height = get["height"]
+        get_pokemon = get_pokemon_data(i)
+        name = get_pokemon["name"]
+        weight = get_pokemon["weight"]
+        height = get_pokemon["height"]
         bmi = weight / (height**2)
-        d[name] = bmi
-        if bmi < n:
-            dic[name] = bmi
-            s = dict(sorted(dic.items(), key=lambda x:-x[1]))
-    d_sorted = dict(sorted(d.items(), key=lambda x: -x[1]))
-    def dict_sorted(n):
-        return s
-    print(d)
-    print(d_sorted)
-    print(dict_sorted(n))
+        bmi_dict[name] = bmi
+    print(bmi_dict)
 
+    sorted_dict = OrderedDict(sorted(bmi_dict.items(), key=lambda x: x[1], reverse=True))
+    print(sorted_dict)
 
+    n = int(input())
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    """
-    def dict_sorted(n):
-        dic = {}
-        for t in range(1, 152):
-            get = get_pokemon_data(t)
-            name = get["name"]
-            weight = get["weight"]
-            height = get["height"]
-            bmi = weight / (height**2)
-            if bmi < n:
-                dic[name] = bmi
-                s = sorted(dic.items(), key=lambda x:-x[1])
-        return dict(s)
-    print(dict_sorted(3))
-    """
+    def threshold(n):
+        threshold_dict = sorted_dict
+        for name in list(sorted_dict):
+            if threshold_dict[name] < n:
+                pass
+            else:
+                threshold_dict.pop(name)
+        return OrderedDict(sorted(threshold_dict.items(), key=lambda x: x[1], reverse=True))
+    print(threshold(n))

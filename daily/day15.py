@@ -26,7 +26,7 @@ HOST = "127.0.0.1"
 # -*-*-*-*-*- トランスポート層 -*-*-*-*-*-
 # プロトコルはTCP(Transmission Control Protocol)を用いる.
 Server = socketserver.TCPServer
-PORT = 8888
+PORT = 54321
 # -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
 
 # -*-*-*-*-*- アプリケーション層 -*-*-*-*-*-

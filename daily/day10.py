@@ -60,7 +60,7 @@ if __name__ == '__main__':
     args = get_args()
 
     # socket関数はソケットを生成する.
-    with socket.socket(FAMILY, TYPE, socket.IPPROTO_TCP) as s:
+    with socket.socket(FAMILY, TYPE, PROTO) as s:
         # -*-*-*- サーバのソケットとして実行 -*-*-*-
         if args.mode == "server":
             # bindメソッドを実行してソケットにアドレスを割り当てる.

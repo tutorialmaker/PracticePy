@@ -65,7 +65,7 @@ if __name__ == '__main__':
             s.listen()
             while True:
                 # acceptメソッドを実行して接続済みのソケットを生成する.
-                conn, address = s.accept()
+                conn, addr = s.accept()
                 print("\n-*-*-*- 接続済みのソケットを生成 -*-*-*-")
                 # TODO: 接続済みのソケットに割り当てられたポート番号を出力するコードを実装
                 # TODO: クライアントのIPアドレスが入手できるか調査し, 可能ならば実装

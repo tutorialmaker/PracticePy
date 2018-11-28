@@ -9,7 +9,7 @@ if __name__ == "__main__":
     (3) List, Tuple, Dict, str
     (4) List, Tuple, Dict, str, Set
 
-    また(2), (3), (4)の組み合わせに共通する属性について,
+    また(2), (3), (4)の組み合わせに共通するSetについて,
     それぞれDict, str, Setを用いて使用例を示せ.
 
     """

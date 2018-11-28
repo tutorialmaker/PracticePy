@@ -31,8 +31,8 @@ def break_dict(d):
 
     """
 
-    keys = d.keys()
-    values = d.values()
+    keys = list(d.keys())
+    values = list(d.values())
 
     # pass
 

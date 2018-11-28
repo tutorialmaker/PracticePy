@@ -22,7 +22,7 @@
 
 """
 
-import sys
+import argparse
 # プロセス間通信の通信のインターフェースとしては,
 # バークレーソケット(Berkeley sockets)が普及している.
 import socket
@@ -50,13 +50,19 @@ HOST = "127.0.0.1"
 # -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
 
 
+def get_args():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("mode")
+    return parser.parse_args()
+
+
 if __name__ == '__main__':
-    opt = sys.argv[1]
+    args = get_args()
 
     # socket関数はソケットを生成する.
     with socket.socket(FAMILY, TYPE, socket.IPPROTO_TCP) as s:
         # -*-*-*- サーバのソケットとして実行 -*-*-*-
-        if opt == "-s":
+        if args.mode == "server":
             # bindメソッドを実行してソケットにアドレスを割り当てる.
             s.bind((HOST, PORT))
             print(f"サーバのIPアドレス : {HOST}")
@@ -83,7 +89,7 @@ if __name__ == '__main__':
         # -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
 
         # -*-*- クライアントのソケットとして実行 -*-*-
-        elif opt == "-c":
+        elif args.mode == "client":
             print(f"クライアントのIPアドレス : {HOST}")
             # connectメソッドを実行して指定したアドレスが割り当てられたソケットに接続する.
             s.connect((HOST, PORT))

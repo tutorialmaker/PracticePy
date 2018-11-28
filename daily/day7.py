@@ -2,13 +2,29 @@ class Pokedex:
     def __init__(self):
         self._pokemon = {}
 
+    @property
+    def pokemon(self):
+        pass
+
+    @pokemon.getter
+    def pokemon(self):
+        pass
+
+    @pokemon.setter
+    def pokemon(self):
+        pass
+
+    @pokemon.deleter
+    def pokemon(self):
+        pass
+
 
 if __name__ == "__main__":
     """
 
     day5で定義した関数get_pokemon_dataをインポートし,
     バリューにget_pokemon_dataの返り値を持ち, キーをずかん番号とするオブジェクトの辞書を
-    プロパティとするクラスPokedexを, 以下に示すコードを適切に実行できるよう完成せよ.
+    プロパティとするクラスPokedexを, 以下に示すコードを適切に実行できるよう修正せよ.
 
     # Pokedexのインスタンスを生成する.
     mypkd = Pokedex()

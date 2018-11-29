@@ -1,46 +1,48 @@
-import urllib.request
-import json
+class Pokedex:
+    def __init__(self):
+        self._pokemon = {}
 
+    @property
+    def pokemon(self):
+        pass
 
-def get_pokemon_data_sp(n):
-    """
+    @pokemon.getter
+    def pokemon(self):
+        pass
 
-    関数get_pokemon_data_spはAPI(https://pokeapi.co/api/v2/)を利用することにより,
-    ずかん番号に対応するポケモンの図鑑情報を返す.
+    @pokemon.setter
+    def pokemon(self):
+        pass
 
-    引数
-    n : int
-
-    返り値
-    data : Dict[Any, Any]
-
-    """
-    url = f'https://pokeapi.co/api/v2/pokemon-species/{n}/'
-    req = urllib.request.Request(url, headers={"User-Agent": "dummy"})
-    with urllib.request.urlopen(req) as f:
-        data = json.loads(f.read().decode("utf-8"))
-
-    return data
+    @pokemon.deleter
+    def pokemon(self):
+        pass
 
 
 if __name__ == "__main__":
     """
 
-    関数get_pokemon_data_spをコンストラクタに用い、
-    ポケモンの分類(genera)、名前(names)に関するクラスPokemonI18nを作成してください。
-    このクラスでは引数に言語コードをとり、その言語コードにおけるポケモンの分類、名前を返すメソッドを定義してください。
-    メソッド名は分類->group、名前->nameとしてください。
-    ただし、引数の言語コードは、APIから取得できる言語しか与えられないことを想定して構いません。
+    day5で定義した関数get_pokemon_dataをインポートし,
+    バリューにget_pokemon_dataの返り値を持ち, キーをずかん番号とするオブジェクトの辞書を
+    プロパティとするクラスPokedexを, 以下に示すコードを適切に実行できるよう修正せよ.
 
-    また、図鑑番号1~15の範囲で、図鑑番号に対応した情報を返す辞書pokemon_infoを作成してください。
+    # Pokedexのインスタンスを生成する.
+    mypkd = Pokedex()
 
-    この課題ではAPIから取得されるデータのキーに関する情報は最低限しか与えられません。
-    まずはhttps://pokeapi.co/api/v2/pokemon-species/1
-    のデータを取得して、どのようなデータがあるのかを確かめてください。
+    # numberはポケモンずかんにおけるポケモンの番号を表す.
+    number = 10
+
+    # mypkdのセッターを用いて, mypkdのインスタンス変数_pokemonsに,
+    # バリューにget_pokemon_dataの返り値を持ち, キーをずかん番号とするオブジェクトを設定する.
+    mypkd.pokemons = get_pokemon_data(number)
+
+    # mypkdのゲッターを用いて, _pokemonsを取得する.
+    pokemons = mypkd.pokemons
+
+    # 取得した辞書からずかん番号numberのポケモンの名称を出力する.
+    print(pokemons[number]["name"])
+
+    # キーがnumberのオブジェクトを削除する.
+    del mypkd.pokemons[number]
 
     """
-
-    # print(pokemon_info[1].name('en')) # Bulbasaur
-    # print(pokemon_info[1].group('de')) # Samen
-    # print(pokemon_info[2].name('roomaji')) # Fushigisou
-    # print(pokemon_info[2].group('fr')) # Pokémon Graine

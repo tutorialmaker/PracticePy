@@ -26,7 +26,7 @@ Handler = http.server.BaseHTTPRequestHandler
 # -*-*-*-*-*- トランスポート層 -*-*-*-*-*-
 # プロトコルはTCP(Transmission Control Protocol)を用いる.
 Server = socketserver.TCPServer
-PORT = 54321
+PORT = 8888
 # -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
 
 # -*-*-*-*-*- インターネット層 -*-*-*-*-*-

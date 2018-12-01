@@ -3,19 +3,19 @@ class Pokedex:
         self._pokemons = {}
 
     @property
-    def pokemon(self):
+    def pokemons(self):
         pass
 
-    @pokemon.getter
-    def pokemon(self):
+    @pokemons.getter
+    def pokemons(self):
         pass
 
-    @pokemon.setter
-    def pokemon(self):
+    @pokemons.setter
+    def pokemons(self):
         pass
 
-    @pokemon.deleter
-    def pokemon(self):
+    @pokemons.deleter
+    def pokemons(self):
         pass
 
 

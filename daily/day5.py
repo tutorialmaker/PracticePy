@@ -3,7 +3,7 @@ import urllib.error
 import json
 from collections import OrderedDict
 
-MAX_NUMBER = 151
+MAX_NUMBER = 20
 
 def get_pokemon_data(n):
     """
@@ -48,7 +48,7 @@ if __name__ == "__main__":
     "weight"および"height"の値の単位はそれぞれ0.1メートルおよび0.1キログラムである.
     """
     threshhold = input('しきい値を入力してください:')
-    bmi_dict = {}
+    bmi_dict = OrderedDict()
     for i in range(1,MAX_NUMBER+1):
         # print(str(i) + "/" + str(MAX_NUMBER))
         poke_data = get_pokemon_data(i)

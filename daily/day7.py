@@ -1,6 +1,6 @@
 class Pokedex:
     def __init__(self):
-        self._pokemon = {}
+        self._pokemons = {}
 
     @property
     def pokemon(self):

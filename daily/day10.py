@@ -39,10 +39,10 @@ PORT = 12345
 # -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
 
 # -*-*-*-*-*- インターネット層 -*-*-*-*-*-
-# プロトコルはIPv4(Internet Protocol version 4)を用いる.
-FAMILY = socket.AF_INET
-# サーバのIPアドレスは127.0.0.1とする.
-HOST = "127.0.0.1"
+# プロトコルはIPv4(Internet Protocol version 6)を用いる.
+FAMILY = socket.AF_INET6
+# サーバのIPアドレスは::1とする.
+HOST = "::1"
 # -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
 
 

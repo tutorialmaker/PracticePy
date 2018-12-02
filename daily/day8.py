@@ -5,9 +5,15 @@ def to_str(string):
 
 def o_or_x(fitzpatrick_scale):
     l = [0x1F645, 0x1F646]
-    color = [0, 0x1f3fb, 0x1f3fc, 0x1f3fd, 0x1f3fe, 0x1f3ff]
-    utf = chr(random.choice(l)).encode() + chr(color[fitzpatrick_scale%6]).encode()
-    print(to_str(utf))
+    color = [0x1f3fb, 0x1f3fc, 0x1f3fd, 0x1f3fe, 0x1f3ff]
+    try:
+        if fitzpatrick_scale == 0:
+            utf = chr(random.choice(l)).encode()
+        else:
+            utf = chr(random.choice(l)).encode() + chr(color[fitzpatrick_scale-1]).encode()
+        return to_str(utf)
+    except:
+        return "Unknown color code!(Code must be 0-5)"
 
 if __name__ == "__main__":
     """
@@ -16,8 +22,9 @@ if __name__ == "__main__":
     \xf0\x9f\x91\x8d
     を復号せよ.
     またUnicodeコードポイントで1F645または1F646の文字をランダムに返す関数o_or_xを定義し実行せよ.
-    ただし引数fitzpatrick_scaleを定義し, これに与える整数の値により返す文字の色調を変更できるようにせよ.
+    また引数fitzpatrick_scaleを定義し, これに与える1から5の整数の値により返す文字の色調を変更できるようにせよ.
+    ただしfitzpatrick_scaleに0から5以外の値が与えられた場合, エラーを出力せよ.
     """
     print(to_str(b'\xf0\x9f\x91\x8d'))
-    for i in range(100):
-        o_or_x(i)
+    for i in range(7):
+        print(o_or_x(i))

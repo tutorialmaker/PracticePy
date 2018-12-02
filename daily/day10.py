@@ -74,7 +74,7 @@ if __name__ == '__main__':
                 # TODO: クライアントのポート番号が入手できるか調査し, 可能ならば実装
                 with conn:
                     # recvメソッドを実行して接続先のソケットからデータを受信する.
-                    data = conn.recv(9)
+                    data = conn.recv(12)
                     if not data: break
                     print(f"受信した符号 : {data}")
 
@@ -96,7 +96,7 @@ if __name__ == '__main__':
             s.send(code)
             print(f"送信した符号 : {code}")
             # recvメソッドを実行してソケットからデータを受信する.
-            code = s.recv(9)
+            code = s.recv(12)
             # 受信したデータをデコードする.
             string = code.decode(errors="replace")
             print(f"受信した符号 : {code}")

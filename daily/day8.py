@@ -12,8 +12,8 @@ def o_or_x(fitzpatrick_scale):
         else:
             utf = chr(random.choice(l)).encode() + chr(color[fitzpatrick_scale-1]).encode()
         return to_str(utf)
-    except:
-        return "Unknown color code!(Code must be 0-5)"
+    except IndexError as e:
+        return e
 
 if __name__ == "__main__":
     """

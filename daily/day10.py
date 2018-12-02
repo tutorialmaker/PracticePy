@@ -92,6 +92,7 @@ if __name__ == '__main__':
             print(f"クライアントのIPアドレス : {HOST}")
             # connectメソッドを実行して指定したアドレスが割り当てられたソケットに接続する.
             s.connect((HOST, PORT))
+            print(f"エフェメラルポート: {s.getsockname()[1]}")
             string = input("送信する文字列 > ")
             # 送信するために文字列をUTF-8でエンコードする.
             code = string.encode()

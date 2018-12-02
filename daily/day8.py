@@ -9,10 +9,12 @@ def o_or_x(fitzpatrick_scale):
     try:
         if fitzpatrick_scale == 0:
             utf = chr(random.choice(l)).encode()
-        else:
+        elif fitzpatrick_scale in range(6):
             utf = chr(random.choice(l)).encode() + chr(color[fitzpatrick_scale-1]).encode()
+        else:
+            raise ValueError('ValueError: fitzpatrick_scale must be 0-5')
         return to_str(utf)
-    except IndexError as e:
+    except ValueError as e:
         return e
 
 if __name__ == "__main__":

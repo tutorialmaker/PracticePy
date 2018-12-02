@@ -14,7 +14,7 @@ class Pokedex:
 
     @pokemons.setter
     def pokemons(self, data):
-        self._pokemons = {data['id']: data}
+        self._pokemons.update({data['id']: data})
 
     @pokemons.deleter
     def pokemons(self):
@@ -28,29 +28,35 @@ if __name__ == "__main__":
     プロパティとするクラスPokedexを, 以下に示すコードを適切に実行できるよう修正せよ.
     # Pokedexのインスタンスを生成する.
     mypkd = Pokedex()
-    # numberはポケモンずかんにおけるポケモンの番号を表す.
-    number = 10
+    # n10およびn20はポケモンずかんにおけるポケモンの番号を表す.
+    n10, n20 = 10, 20
     # mypkdのセッターを用いて, mypkdのインスタンス変数_pokemonsに,
     # バリューにget_pokemon_dataの返り値を持ち, キーをずかん番号とするオブジェクトを設定する.
-    mypkd.pokemons = get_pokemon_data(number)
+    mypkd.pokemons = get_pokemon_data(n10)
+    mypkd.pokemons = get_pokemon_data(n20)
     # mypkdのゲッターを用いて, _pokemonsを取得する.
     pokemons = mypkd.pokemons
-    # 取得した辞書からずかん番号numberのポケモンの名称を出力する.
-    print(pokemons[number]["name"])
-    # キーがnumberのオブジェクトを削除する.
-    del mypkd.pokemons[number]
+    # 取得した辞書からずかん番号10のポケモンの名称を出力する.
+    print(pokemons[n10]["name"])
+    # キーがn10のオブジェクトを削除する.
+    del mypkd.pokemons[n10]
+    # 取得した辞書からずかん番号20のポケモンの名称を出力する.
+    print(pokemons[n20]["name"])
     """
 
     # Pokedexのインスタンスを生成する.
     mypkd = Pokedex()
-    # numberはポケモンずかんにおけるポケモンの番号を表す.
-    number = 10
+    # n10およびn20はポケモンずかんにおけるポケモンの番号を表す.
+    n10, n20 = 10, 20
     # mypkdのセッターを用いて, mypkdのインスタンス変数_pokemonsに,
     # バリューにget_pokemon_dataの返り値を持ち, キーをずかん番号とするオブジェクトを設定する.
-    mypkd.pokemons = get_pokemon_data(number)
+    mypkd.pokemons = get_pokemon_data(n10)
+    mypkd.pokemons = get_pokemon_data(n20)
     # mypkdのゲッターを用いて, _pokemonsを取得する.
     pokemons = mypkd.pokemons
-    # 取得した辞書からずかん番号numberのポケモンの名称を出力する.
-    print(pokemons[number]["name"])
-    # キーがnumberのオブジェクトを削除する.
-    del mypkd.pokemons[number]
+    # 取得した辞書からずかん番号10のポケモンの名称を出力する.
+    print(pokemons[n10]["name"])
+    # キーがn10のオブジェクトを削除する.
+    del mypkd.pokemons[n10]
+    # 取得した辞書からずかん番号20のポケモンの名称を出力する.
+    print(pokemons[n20]["name"])

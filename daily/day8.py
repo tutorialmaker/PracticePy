@@ -6,14 +6,14 @@ def to_str(string):
 def o_or_x(fitzpatrick_scale):
     l = [0x1F645, 0x1F646]
     color = [0x1f3fb, 0x1f3fc, 0x1f3fd, 0x1f3fe, 0x1f3ff]
-    if fitzpatrick_scale == 0:
-        utf = chr(random.choice(l))
-    elif fitzpatrick_scale in range(6):
-        utf = chr(random.choice(l))+ chr(color[fitzpatrick_scale-1])
-    else:
+    if not fitzpatrick_scale in range(6):
         raise ValueError('fitzpatrick_scale must be 0-5')
+    elif fitzpatrick_scale == 0:
+        utf = chr(random.choice(l))
+    else:
+        utf = chr(random.choice(l))+ chr(color[fitzpatrick_scale-1])
     return utf
-    
+
 if __name__ == "__main__":
     """
     バイト列を引数に取り, Unicode文字に復号化してその結果を返す関数to_strを定義せよ.

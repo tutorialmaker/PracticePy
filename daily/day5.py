@@ -39,7 +39,7 @@ def main():
         pokemon = get_pokemon_data(i)
         name = pokemon['forms'][0]
         name = name['name']
-        bmi = 10*pokemon['weight']/((pokemon['height']*0.1)**2)
+        bmi = 10*pokemon['weight']/((pokemon['height']*10)**2)
         pokemons[name] = bmi
     print(sorted(pokemons.items(), key=lambda x:x[1], reverse=True))
     pokemons = dict(sorted(pokemons.items(), key=lambda x:x[1], reverse=True))

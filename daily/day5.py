@@ -60,6 +60,5 @@ def threshold(x, dict_sorted):
     for k, v in dict_sorted.items():
         if v < x:
             under_threshold[k] = v
-    under_threshold = dict(sorted(under_threshold.items(), key=lambda x: x[1], reverse=True))
     return under_threshold
 print(threshold(15, dict_sorted))

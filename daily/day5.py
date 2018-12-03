@@ -1,7 +1,6 @@
 import urllib.request
 import urllib.error
 import json
-from collections import OrderedDict
 
 def get_pokemon_data(n):
     """
@@ -34,26 +33,3 @@ if __name__ == "__main__":
     バリューとしてキー"name"および"weight"および"height"に対応しており,
     "weight"および"height"の値の単位はそれぞれ0.1メートルおよび0.1キログラムである.
     """
-
-    bmi_dict = OrderedDict()
-    for i in range(1, 152):
-        get_pokemon = get_pokemon_data(i)
-        name = get_pokemon["name"]
-        weight = get_pokemon["weight"]/10
-        height = get_pokemon["height"]/10
-        bmi = weight / (height**2)
-        bmi_dict[name] = bmi
-    print(bmi_dict)
-
-    sorted_dict = OrderedDict(sorted(bmi_dict.items(), key=lambda x: x[1], reverse=True))
-    print(sorted_dict)
-
-    n = int(input())
-
-    def threshold(n, threshold_dict):
-        final_dict = OrderedDict()
-        for name in threshold_dict.keys():
-            if threshold_dict[name] < n:
-                final_dict[name] = threshold_dict[name]
-        return final_dict
-    print(threshold(n, sorted_dict))

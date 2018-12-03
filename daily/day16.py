@@ -8,6 +8,13 @@ from reprlib import recursive_repr
 
 
 class Matrix(list):
+    """行列
+
+    Parameters
+    ----------
+    M : Iterable
+
+    """
     __slots__ = ["_shape", ]
 
     def __init__(self, M):
@@ -40,6 +47,19 @@ class Matrix(list):
         return self._shape
 
     def getT(self):
+        """
+        転置した行列を返す.
+
+        Parameters
+        ----------
+        None
+
+        Returns
+        -------
+        ret : Matrix
+            自身の転置行列.
+
+        """
         # TODO: 転置を返すメソッドを実装
         pass
 

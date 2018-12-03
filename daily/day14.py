@@ -19,6 +19,8 @@
         mic.set(HP=300, ATK=200, DEF=100)
         min.set(HP=200, ATK=300, DEF=100)
         don.set(HP=100, ATK=100, DEF=50)
+        
+        book.show()
 
 """
 

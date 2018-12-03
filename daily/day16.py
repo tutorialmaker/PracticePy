@@ -44,6 +44,7 @@ class Matrix(list):
         return NotImplemented
 
     def getshape(self):
+        # TODO: ドキュメンテーションを追記
         return self._shape
 
     def getT(self):

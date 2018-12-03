@@ -38,8 +38,7 @@ def main():
     th = float(input())
     for i in range(1, 10):
         pokemon = get_pokemon_data(i)
-        name = pokemon['forms'][0]
-        name = name['name']
+        name = pokemon['forms'][0]['name']
         bmi = 10*pokemon['weight']/((pokemon['height']*10)**2)
         pokemons[name] = bmi
     result = threash(th, pokemons)

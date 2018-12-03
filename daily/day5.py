@@ -24,12 +24,12 @@ def get_pokemon_data(n):
     except urllib.error.URLError:
         print("\nError: The requested URL could not be retrived. \
                         Are you connected to the Internet?\n")
+
 def threash(th, dic):
     threashed = OrderedDict()
     for k, v in dic.items():
         if v < th:
             threashed[k] = v
-    threashed = dict(sorted(threashed.items(), key=lambda x:x[1], reverse=True))
     return threashed
 
 def main():
@@ -42,9 +42,8 @@ def main():
         name = name['name']
         bmi = 10*pokemon['weight']/((pokemon['height']*10)**2)
         pokemons[name] = bmi
-    pokemons = dict(sorted(pokemons.items(), key=lambda x:x[1], reverse=True))
     result = threash(th, pokemons)
-    print(result)
+    print(dict(result))
 if __name__ == "__main__":
     """
     関数get_pokemon_dataを用いて,

@@ -56,7 +56,7 @@ print(dict_sorted)
 
 # 引数にしきい値とBMIが高い順に並んだ順序付き辞書をとって閾値以下のBMIのポケモンのみの辞書を返す
 def threshold(x, dict_sorted):
-    under_threshold = {}
+    under_threshold = OrderedDict()
     for k, v in dict_sorted.items():
         if v < x:
             under_threshold[k] = v

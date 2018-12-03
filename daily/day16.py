@@ -61,7 +61,7 @@ if __name__ == "__main__":
         import numpy as np
         """
 
-            Numpyを用いてAとBの内積を求めよ.
+            NumPyを用いてAとBの内積を求めよ.
 
         """
 

@@ -29,9 +29,4 @@ if __name__ == "__main__":
 
     """
 
-    pokemon_species = [x["pokemon_species"] for x in kanto_pokedex()]
-    pokemon_name = [i["name"] for i in pokemon_species]
-
-    print(pokemon_name)
-
     # print(pokemon_name)

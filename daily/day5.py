@@ -39,8 +39,8 @@ if __name__ == "__main__":
     for i in range(1, 152):
         get_pokemon = get_pokemon_data(i)
         name = get_pokemon["name"]
-        weight = get_pokemon["weight"]
-        height = get_pokemon["height"]
+        weight = get_pokemon["weight"]/10
+        height = get_pokemon["height"]/10
         bmi = weight / (height**2)
         bmi_dict[name] = bmi
     print(bmi_dict)

@@ -3,6 +3,7 @@ import urllib.error
 import json
 from collections import OrderedDict
 
+
 def get_pokemon_data(n):
     """
     関数get_pokemon_dataはAPI(https://pokeapi.co/api/v2/)を利用することにより,
@@ -25,6 +26,7 @@ def get_pokemon_data(n):
         print("\nError: The requested URL could not be retrived. \
                         Are you connected to the Internet?\n")
 
+
 def threash(th, dic):
     threashed = OrderedDict()
     for k, v in dic.items():
@@ -32,17 +34,20 @@ def threash(th, dic):
             threashed[k] = v
     return threashed
 
+
 def main():
     pokemons = OrderedDict()
     print('しきい値を入力してください.')
     th = float(input())
     for i in range(1, 10):
         pokemon = get_pokemon_data(i)
-        name = pokemon['forms'][0]['name']
+        name = pokemon['name']
         bmi = 10*pokemon['weight']/(pokemon['height']**2)
         pokemons[name] = bmi
     result = threash(th, pokemons)
     print(dict(result))
+
+
 if __name__ == "__main__":
     """
     関数get_pokemon_dataを用いて,

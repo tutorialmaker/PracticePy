@@ -1,4 +1,5 @@
 class Pokedex:
+    """ポケモンの情報を格納する."""
     def __init__(self):
         self._pokemons = {}
 

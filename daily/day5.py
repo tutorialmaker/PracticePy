@@ -36,3 +36,32 @@ if __name__ == "__main__":
     "weight"および"height"の値の単位はそれぞれ0.1メートルおよび0.1キログラムである.
 
     """
+
+pokemon_dict = {}
+for i in range(3):
+    pokemon = get_pokemon_data(i+1)
+    pokemon_name = pokemon["name"]
+    pokemon_bmi = (pokemon["weight"]/(pokemon["height"])**2)*10
+    pokemon_dict[pokemon_name] = pokemon_bmi
+print(pokemon_dict)
+
+dict_sorted = {}
+for k, v in sorted(pokemon_dict.items(), key=lambda x: x[1], reverse=True):
+    dict_sorted[k] = v
+print(dict_sorted)
+
+def under_threshold(x):
+    dict_under_threshold = {}
+    for i in range(1,5):
+        data = get_pokemon_data(i)
+        name = data["name"]
+        weight = data["weight"]
+        height = data["height"]
+        BMI = weight/height**2
+        bmi = BMI*10
+        if bmi < x:
+            dict_under_threshold[name] = bmi
+            dict_sort = {}
+            for k, v in sorted(dict_under_threshold.items(), key=lambda x: x[1], reverse=True):
+                dict_sort[k] = v
+    return dict_sort

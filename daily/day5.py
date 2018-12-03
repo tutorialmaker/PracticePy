@@ -1,6 +1,7 @@
 import urllib.request
 import urllib.error
 import json
+from collections import OrderedDict
 
 def get_pokemon_data(n):
     """
@@ -24,7 +25,7 @@ def get_pokemon_data(n):
         print("\nError: The requested URL could not be retrived. \
                         Are you connected to the Internet?\n")
 def threash(th, dic):
-    threashed = {}
+    threashed = OrderedDict()
     for k, v in dic.items():
         if v < th:
             threashed[k] = v
@@ -32,7 +33,7 @@ def threash(th, dic):
     return threashed
 
 def main():
-    pokemons = {}
+    pokemons = OrderedDict()
     print('しきい値を入力してください.')
     th = float(input())
     for i in range(1, 10):
@@ -41,7 +42,6 @@ def main():
         name = name['name']
         bmi = 10*pokemon['weight']/((pokemon['height']*10)**2)
         pokemons[name] = bmi
-    print(sorted(pokemons.items(), key=lambda x:x[1], reverse=True))
     pokemons = dict(sorted(pokemons.items(), key=lambda x:x[1], reverse=True))
     result = threash(th, pokemons)
     print(result)

@@ -17,6 +17,8 @@ class Matrix(list):
         for row in self:
             if not hasattr(row, "__iter__"):
                 raise TypeError(f"{type(row)} object is not iterable")
+            elif not isinstance(row, list):
+                row = list(row)
 
             rlens.append(len(row))
             for v in row:

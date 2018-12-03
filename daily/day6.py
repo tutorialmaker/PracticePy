@@ -1,31 +1,37 @@
+from collections import OrderedDict
+from day5 import get_pokemon_data
 
 if __name__ == "__main__":
     """
+    day5で作成した順序付き辞書に対して,
+    存在しないキー(例えば"MissingNo.")をキーとしてバリューの取得を試みた場合,
+    KeyErrorが発生する.
+    day5で定義した関数get_pokemon_dataをインポートし,
+    day5で作成した順序付き辞書を再び作成, これを用いて存在しないキーを指定した場合,
+    KeyErrorを発生させずにデフォルトとしてNoneを返すようなバリューの取得方法について
+    以下の二つの方法で示せ.
 
-    day5で用いられた関数get_pokemon_dataを用いて,
+    (α)
+    バリューを取得した場合, 辞書から取得したバリューのキーを削除する.
 
-    {
-    'bulbasaur': 7, 'ivysaur': 10, 'venusaur': 20,
-    'charmander': 6, 'charmeleon': 11, 'charizard': 17,
-    'squirtle': 5, 'wartortle': 10, 'blastoise': 16
-    }
-
-    といったポケモンの名前,高さの辞書を作成してください。
-    ポケモンの名前はnameキー、高さはheightキーで取得できます。
-    ただし、get_pokemon_dataはday5からimportしてください。
-
-    さらに、_辞書内包表記_を用いて以下のような_高さが1.0m以下_の
-    ポケモンの名前,高さの辞書を1~30番までのポケモンで作成してください。
-    辞書の名前はchibiesにしてください。
-
-    {
-    'bulbasaur': 7, 'ivysaur': 10, 'charmander': 6,
-    'squirtle': 5, 'wartortle': 10, 'caterpie': 3,
-    ...
-    'sandshrew': 6, 'sandslash': 10, 'nidoran-f': 4
-    }
-
-    0.1m = 1であることに注意してください。
+    (β)
+    バリューを取得した場合でも, 辞書から取得したバリューのキーを削除しない.
     """
+    bmi_dict = OrderedDict()
+    for i in range(1, 152):
+        get_pokemon = get_pokemon_data(i)
+        name = get_pokemon["name"]
+        weight = get_pokemon["weight"]/10
+        height = get_pokemon["height"]/10
+        bmi = weight / (height**2)
+        bmi_dict[name] = bmi
 
-    # print(chibies)
+    sorted_dict = OrderedDict(sorted(bmi_dict.items(), key=lambda x: x[1], reverse=True))
+
+    # (α)
+    value = sorted_dict.pop("MissingNo.", None)
+    print(value)
+
+    # (β)
+    value = sorted_dict.get("MissingNo.")
+    print(value)

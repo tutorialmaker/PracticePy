@@ -29,5 +29,7 @@ if __name__ == "__main__":
     ずかん番号1から151に対応するポケモンの名称をリストpokemon_nameに格納せよ.
 
     """
-
-    # print(pokemon_name)
+    pokemon_name = []
+    for pocket_monster in kanto_pokedex():
+        pokemon_name.append(pocket_monster["pokemon_species"]["name"])
+    print(pokemon_name)

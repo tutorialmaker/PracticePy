@@ -8,6 +8,6 @@ setup(name='day17',
       maintainer='hiroki',
       maintainer_email='tutorialmaker.info@gmail.com',
       packages=['day17'],
-      setup_requires = ['pytest-runner'],
+      setup_requires=['pytest-runner'],
       tests_require=['pytest'],
-)
+      )

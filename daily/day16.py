@@ -37,7 +37,7 @@ class Matrix(list):
         if rlen != min(rlen_list):
             raise ValueError(f"unexpected Matrix shape")
         clen = len(rlen_list)
-        self._shape = (clen, rlen)
+        self.__shape = (clen, rlen)
 
     def __mul__(self, other):
         # TODO: 行列積の計算を実装
@@ -45,7 +45,7 @@ class Matrix(list):
 
     def getshape(self):
         # TODO: ドキュメンテーションを追記
-        return self._shape
+        return self.__shape
 
     def getT(self):
         """

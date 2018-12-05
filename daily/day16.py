@@ -21,11 +21,11 @@ class Matrix(list):
         super().__init__(M)
 
         rlen_list = []
-        for row in self:
+        for i, row in enumerate(self):
             if not hasattr(row, "__iter__"):
                 raise TypeError(f"{type(row)} object is not iterable")
             elif not isinstance(row, list):
-                row = list(row)
+                self[i] = row = list(row)
 
             rlen_list.append(len(row))
             for e in row:

@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(name='day17',
       version='1.0.0',
-      description='Package for Day 17',
+      description='Example Package',
       url='https://github.com/tutorialmaker/PracticePy',
       maintainer='hiroki',
       maintainer_email='tutorialmaker.info@gmail.com',

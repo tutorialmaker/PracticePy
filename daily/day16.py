@@ -20,23 +20,23 @@ class Matrix(list):
     def __init__(self, M):
         super().__init__(M)
 
-        rlens = []
+        rlen_list = []
         for row in self:
             if not hasattr(row, "__iter__"):
                 raise TypeError(f"{type(row)} object is not iterable")
             elif not isinstance(row, list):
                 row = list(row)
 
-            rlens.append(len(row))
-            for v in row:
-                if not isinstance(v, Number):
+            rlen_list.append(len(row))
+            for e in row:
+                if not isinstance(e, Number):
                     raise TypeError(
-                        f"Matrix element must be a Number, not {type(v)}")
+                        f"Matrix element must be a Number, not {type(e)}")
 
-        rlen = max(rlens)
-        if rlen != min(rlens):
+        rlen = max(rlen_list)
+        if rlen != min(rlen_list):
             raise ValueError(f"unexpected Matrix shape")
-        clen = len(rlens)
+        clen = len(rlen_list)
         self._shape = (clen, rlen)
 
     def __mul__(self, other):

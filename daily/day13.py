@@ -46,9 +46,9 @@ class Person:
 
         name = [n.capitalize() for n in name.split(" ")]
         if len(name) == 1:
-            raise Exception("The first and last names must be separated by spaces.")
+            raise Exception("The first name and last name must be separated by spaces.")
         elif len(name) > 2:
-            raise Exception("Only the first and last names are accepted.")
+            raise Exception("Only the first and last name are accepted.")
 
         self.data.append({"name" : {"first" : name[0], "last": name[1]},
                         "title" : title})

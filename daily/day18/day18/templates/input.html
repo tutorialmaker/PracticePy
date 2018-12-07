@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block body %}
+  <form action="/" method="POST">
+    <div>
+      <input name="00"></input>
+      <input name="01"></input>
+      <br>
+      <input name="10"></input>
+      <input name="11"></input>
+    </div>
+    <input type="submit" value="compute">
+  </form>
+  {% block result %}{% endblock %}
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'input.html' %}
+
+{% block result %}
+  <hr>
+  <h1>Input</h1>
+  <h2>Matrix</h2>
+  <div>
+    {% for row in result.input %}
+      {% for e in row %}
+        {{ e }}
+      {% endfor %}<br>
+    {% endfor %}
+  </div>
+  <hr>
+  <h1>Result</h1>
+  <h2>Determinant</h2>
+  <div>
+    {{ result.det }}
+  </div>
+  <h2>Rank</h2>
+  <div>
+    {{ result.rank }}
+  </div>
+  <h2>Inverse Matrix</h2>
+  <div>
+    {% if result.inv %}
+      {% for row in result.inv %}
+        {% for e in row %}
+          {{ e }}
+        {% endfor %}<br>
+      {% endfor %}
+    {% else %}
+        Input matrix is a singular matrix.
+    {% endif %}
+  </div>
+{% endblock %}

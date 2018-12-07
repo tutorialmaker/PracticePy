@@ -1,0 +1,3 @@
+include README.md
+graft day18/templates
+global-exclude *.pyc

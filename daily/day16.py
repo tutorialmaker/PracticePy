@@ -15,8 +15,6 @@ class Matrix(list):
     M : Iterable
 
     """
-    __slots__ = ["_shape", ]
-
     def __init__(self, M):
         super().__init__(M)
 

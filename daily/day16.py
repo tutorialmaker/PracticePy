@@ -18,23 +18,23 @@ class Matrix(list):
     def __init__(self, M):
         super().__init__(M)
 
-        rlen_list = []
+        rowlengths = []
         for i, row in enumerate(self):
             if not hasattr(row, "__iter__"):
                 raise TypeError(f"{type(row)} object is not iterable")
             elif not isinstance(row, list):
                 self[i] = row = list(row)
 
-            rlen_list.append(len(row))
+            rowlengths.append(len(row))
             for e in row:
                 if not isinstance(e, Number):
                     raise TypeError(
                         f"Matrix element must be a Number, not {type(e)}")
 
-        rlen = max(rlen_list)
-        if rlen != min(rlen_list):
+        rlen = max(rowlengths)
+        if rlen != min(rowlengths):
             raise ValueError(f"unexpected Matrix shape")
-        clen = len(rlen_list)
+        clen = len(rowlengths)
         self.__shape = (clen, rlen)
 
     def __mul__(self, other):

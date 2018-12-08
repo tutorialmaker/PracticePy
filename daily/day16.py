@@ -41,7 +41,8 @@ class Matrix(list):
         # TODO: 行列積の計算を実装
         return NotImplemented
 
-    def getshape(self):
+    @property
+    def shape(self):
         # TODO: ドキュメンテーションを追記
         return self.__shape
 
@@ -66,7 +67,6 @@ class Matrix(list):
     def __repr__(self):
         return f"{self.__class__.__name__}({list(self)})"
 
-    shape = property(getshape, None)
     # TODO: 転置について読み取り専用のアクセサを実装
 
 

@@ -59,7 +59,7 @@ import random
 
 class _Count:
     """
-    各行, 列および対角上でスタンプされた数の総数を記録する.
+    各行, 列および対角上でスタンプされた番号の総数を記録する.
     """
     __slots__ = 'size', 'row', 'col', 'diag'
 
@@ -122,7 +122,7 @@ class BingoCard:
 
     @property
     def count(self):
-        """各行, 列および対角上でスタンプされた数の総数を返す."""
+        """各行, 列および対角上でスタンプされた番号の総数を返す."""
         count = self._count
         report = {'row': count.row,
                   'col': count.col,

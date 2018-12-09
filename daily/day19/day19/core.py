@@ -31,11 +31,11 @@ class BingoCard:
         self._filled = 'X' * len(str(high))
         values = list(range(low, high))
         random.shuffle(values)
+        center = int(size/2)
         around = int(size**2/2)
         values = values[:around] + [self._filled] + values[around:]
         self._squares = [values[size*p:size*(p+1)] for p in range(size)]
         self._count = _Count(size)
-        center = int(size/2)
         self._count.filled(center, center)
 
     def get(self, num):

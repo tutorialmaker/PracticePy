@@ -1,3 +1,59 @@
+"""
+
+    定義したBingoCardを用いてビンゴゲームをシミュレーションする.
+
+    (α)
+    以下のドキュメンテーションに示すような関数checkを実装せよ.
+
+    リーチおよびビンゴの有無を調べる.
+
+    Parameters
+    ----------
+    card : instance of BingoCard
+        BingoCardのインスタンス
+
+    Returns
+    -------
+    result : None or str
+        cardにリーチが含まれるならば'reach',
+        リーチの有無に関わらずビンゴが含まれるならば'bingo',
+        リーチもビンゴも含まれないならばNone.
+
+    (β)
+    以下のドキュメンテーションに示すようなジェネレータsimulateを実装せよ.
+
+    ビンゴゲームをシミュレーションする.
+    最大でカードに含まれうる数字の数だけ反復可能である.
+
+    Parameters
+    ----------
+    players : int
+        ビンゴゲームの参加人数
+    size : int
+        カードの列および行数
+    high : int
+        カードが含む数字の最大値
+    low : int
+        カードが含む数字の最小値
+
+    Yield
+    -----
+    report : List
+        各参加者のカードにビンゴおよびリーチが含まれるかどうか示す.
+        カードにリーチが含まれるならば'reach',
+        リーチの有無に関わらずビンゴが含まれるならば'bingo',
+        リーチもビンゴも含まれないならばNoneで表す.
+
+    (γ)
+    BingoCardと同様の機能を持つBingoCard2をNumPyを用いて新たに定義せよ.
+
+    (δ)
+    timeitを用いてBingoCardとBingoCard2でビンゴゲームをシミュレーションした場合の
+    処理時間を測定し, 測定結果をコメントアウトに記載せよ.
+    ただし参加者数は10人, カードの列および行数は99マスとし,
+    シミュレーション10回分の処理時間を求めよ.
+
+"""
 import random
 
 
@@ -70,3 +126,11 @@ class BingoCard:
                 card += str(e).zfill(digit) + '|'
         card += '\n' + footer
         return f'{card}'
+
+
+if __name__ == "__main__":
+    """
+
+    実行するコードを実装する.
+
+    """

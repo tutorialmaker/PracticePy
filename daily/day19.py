@@ -42,7 +42,7 @@
         リーチもビンゴも含まれないならばNoneで表す.
 
     (γ)
-    BingoCardと同様の機能を持つBingoCard2をNumPyを用いて新たに定義せよ.
+    NumPyを用いてBingoCardと同様の機能を持つBingoCard2を新たに定義せよ.
 
     (δ)
     timeitを用いてBingoCardとBingoCard2でビンゴゲームをシミュレーションした場合の

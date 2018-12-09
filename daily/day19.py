@@ -73,6 +73,7 @@ class _Count:
         self.diag = {0: 0, 1: 0}
 
     def filled(self, i, j):
+        """i行j列の番号がスタンプされたことを記録する."""
         self.row[i] += 1
         self.col[j] += 1
         if i == j:

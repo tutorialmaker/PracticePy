@@ -110,7 +110,7 @@ class BingoCard:
         self._count = _Count(size)
         self._count.filled(center, center)
 
-    def get(self, num):
+    def stamped(self, num):
         """引数の番号がカードにあるならば, 番号をスタンプする."""
         squares = self._squares
         size = len(squares)

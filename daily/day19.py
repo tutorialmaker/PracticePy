@@ -58,6 +58,9 @@ import random
 
 
 class _Count:
+    """
+    各行, 列および対角上でスタンプされた数の総数を記録する.
+    """
     __slots__ = 'size', 'row', 'col', 'diag'
 
     def __init__(self, size):
@@ -76,6 +79,19 @@ class _Count:
 
 
 class BingoCard:
+    """
+    ビンゴカード
+
+    Parameters
+    ----------
+    size : int
+        カードの列および行数
+    high : int
+        カードが含む数字の最大値
+    low : int
+        カードが含む数字の最小値
+
+    """
     __slots__ = '_filled', '_count', '_squares'
 
     def __init__(self, size=5, high=75, low=1):
@@ -95,6 +111,7 @@ class BingoCard:
         self._count.filled(center, center)
 
     def get(self, num):
+        """引数の番号がカードにあるならば, 番号をスタンプする."""
         squares = self._squares
         size = len(squares)
         for i in range(size):
@@ -105,6 +122,7 @@ class BingoCard:
 
     @property
     def count(self):
+        """各行, 列および対角上でスタンプされた数の総数を返す."""
         count = self._count
         report = {'row': count.row,
                   'col': count.col,

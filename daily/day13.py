@@ -7,11 +7,11 @@
 
 
 class Person:
-    """個人情報
+    """
+    個人情報を記録管理する.
 
     Attributes
     ----------
-
     data : List
         個人情報のリスト
 
@@ -20,15 +20,14 @@ class Person:
         self.data = list()
 
     def add(self, name, **options):
-        """名前を個人情報のリストに追加する
+        """
+        名前を個人情報のリストに追加する.
 
         Parameters
         ----------
-
         name : str
             登録する人物の名前.
             姓と名は半角スペース' 'で区切られている必要がある.
-
         **options :
             titleは登録する人物の肩書きで,
             titleが与えられていない場合, titleは'Esq'を与える.

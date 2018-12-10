@@ -1,3 +1,21 @@
+from day5 import get_pokemon_data
+from collections import OrderedDict
+
+def main():
+    pokemons = OrderedDict()
+    for i in range(1, 10):
+        pokemon = get_pokemon_data(i)
+        name = pokemon['name']
+        bmi = 0.1*pokemon['weight']/((0.1*pokemon['height'])**2)
+        pokemons[name] = bmi
+    print('ivysaur' in pokemons)
+    # (β)
+    print(pokemons.get('ivysaur', None))
+
+    # (α)
+    print(pokemons.pop('ivysaur', None))
+    print('ivysaur' in pokemons)
+
 if __name__ == "__main__":
     """
 
@@ -16,3 +34,4 @@ if __name__ == "__main__":
     バリューを取得した場合でも, 辞書から取得したバリューのキーを削除しない.
 
     """
+    main()

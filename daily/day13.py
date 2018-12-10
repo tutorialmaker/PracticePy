@@ -1,7 +1,7 @@
 """
 
     以下のPersonは個人情報を取り扱うクラスである.
-    ドキュメンテーションを参考にTODOの内容を実装せよ.
+    ドキュメンテーションを参考にTODOを実装せよ.
 
 """
 
@@ -38,7 +38,7 @@ class Person:
             genderは登録する人物の性別を与える.
 
         """
-        # TODO: genderに関する機能を追加する.
+        # TODO: genderに関する機能を実装
 
         title = options.pop("title", None)
         if title is not None:

@@ -24,7 +24,7 @@ if __name__ == "__main__":
     """
 
     day5で定義した関数get_pokemon_dataをインポートし,
-    以下に示すコードが適切に実行されるように修正せよ.
+    以下に示すコードが適切に実行されるようPokedexを修正せよ.
 
     # Pokedexのインスタンスを生成する.
     mypkd = Pokedex()

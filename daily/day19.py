@@ -6,7 +6,7 @@
 
     Parameters
     ----------
-    card : instance of BingoCard
+    card : BingoCard
         BingoCardのインスタンス
 
     Returns
@@ -26,11 +26,11 @@
     ----------
     players : int
         ビンゴゲームの参加人数
-    size : int
+    size : int, default 5
         カードの列および行数
-    high : int
+    high : int, default 75
         カードが含む数字の最大値
-    low : int
+    low : int, default 1
         カードが含む数字の最小値
 
     Yield
@@ -88,11 +88,11 @@ class BingoCard:
 
     Parameters
     ----------
-    size : int
+    size : int, default 5
         カードの列および行数
-    high : int
+    high : int, default 75
         カードが含む数字の最大値
-    low : int
+    low : int, default 1
         カードが含む数字の最小値
 
     """

@@ -27,12 +27,12 @@ def get_pokemon_data(n):
                         Are you connected to the Internet?\n")
 
 
-def threash(th, dic):
-    threashed = OrderedDict()
-    for k, v in dic.items():
-        if v < th:
-            threashed[k] = v
-    return threashed
+def thresh(threshold, normal_dict):
+    threshed = OrderedDict()
+    for key, value in normal_dict.items():
+        if value < threshold:
+            threshed[k] = value
+    return threshed
 
 
 def main():
@@ -42,9 +42,9 @@ def main():
     for i in range(1, 10):
         pokemon = get_pokemon_data(i)
         name = pokemon['name']
-        bmi = 10*pokemon['weight']/(pokemon['height']**2)
+        bmi = 0.1*pokemon['weight']/((0.1*pokemon['height'])**2)
         pokemons[name] = bmi
-    result = threash(th, pokemons)
+    result = thresh(th, pokemons)
     print(dict(result))
 
 

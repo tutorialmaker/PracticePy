@@ -96,7 +96,7 @@ class BingoCard:
         カードが含む数字の最小値
 
     """
-    __slots__ = '_filled', '_count', '_squares'
+    __slots__ = '_filled', '_count', '_squares', '_digit'
 
     def __init__(self, size=5, high=75, low=1):
         if size % 2 == 0:
@@ -104,7 +104,8 @@ class BingoCard:
         elif high - low < size ** 2 - 1:
             low, high = 1, size ** 2
 
-        self._filled = 'X' * len(str(high))
+        self._filled = float('nan')
+        self._digit = len(str(high))
         values = list(range(low, high))
         random.shuffle(values)
         center = int(size/2)
@@ -138,13 +139,15 @@ class BingoCard:
             return f'{self.__class__.__name__}'
 
         squares = self._squares
+        digit = self._digit
         size = len(squares)
-        digit = len(self._filled)
         header = footer = '+' + '-' * (size * digit + size - 1) + '+'
         card = header
         for row in squares:
             card += '\n' + '|'
             for e in row:
+                if e != e:
+                    e = 'X' * digit
                 card += str(e).zfill(digit) + '|'
         card += '\n' + footer
         return f'{card}'

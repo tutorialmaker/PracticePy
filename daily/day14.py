@@ -2,8 +2,9 @@
 
     SpeciesBookはモンスターの記録管理をする.
     SpeciesBookの処理をヘルパークラスを用いて簡略化せよ.
+    ただし, クラスおよびメソッドに対してアノテーションを必ず付与すること.
     なお一例として, ヘルパークラスを用いた場合,
-    99行目以降の処理は以下のように簡略化することができる.
+    139行目以降の処理は以下のように簡略化することができる.
 
 
     if __name__ == "__main__":
@@ -19,18 +20,16 @@
         mic.set(HP=300, ATK=200, DEF=100)
         min.set(HP=200, ATK=300, DEF=100)
         don.set(HP=100, ATK=100, DEF=50)
-        
-        book.show()
 
 """
 
 
 class SpeciesBook:
-    """モンスターを記録管理する
+    """
+    モンスターを記録管理する.
 
     Attributes
     ----------
-
     _status : Dict
         モンスターの種族, 名称, ステータス(体力, 攻撃力, 守備力)を記録管理する.
 
@@ -39,11 +38,11 @@ class SpeciesBook:
         self._status = {}
 
     def set_species(self, species):
-        """新しい種族を追加する
+        """
+        新しい種族を追加する.
 
         Parameters
         ----------
-
         species : str
             新しく追加する種族の名称.
 
@@ -51,23 +50,19 @@ class SpeciesBook:
         self._status[species] = {}
 
     def set_monster(self, species, name, *, HP, ATK, DEF):
-        """新しいモンスターを追加する
+        """
+        新しいモンスターを追加する.
 
         Parameters
         ----------
-
         species : str
             既に追加した種族の名称.
-
         name : str
             新しく追加するモンスターの名称.
-
         HP : int
             体力.
-
         ATK : int
             攻撃力.
-
         DEF : int
             守備力.
 

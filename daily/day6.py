@@ -1,6 +1,3 @@
-from collections import OrderedDict
-from day5 import get_pokemon_data
-
 if __name__ == "__main__":
     """
     day5で作成した順序付き辞書に対して,
@@ -17,21 +14,3 @@ if __name__ == "__main__":
     (β)
     バリューを取得した場合でも, 辞書から取得したバリューのキーを削除しない.
     """
-    bmi_dict = OrderedDict()
-    for i in range(1, 152):
-        get_pokemon = get_pokemon_data(i)
-        name = get_pokemon["name"]
-        weight = get_pokemon["weight"]/10
-        height = get_pokemon["height"]/10
-        bmi = weight / (height**2)
-        bmi_dict[name] = bmi
-
-    sorted_dict = OrderedDict(sorted(bmi_dict.items(), key=lambda x: x[1], reverse=True))
-
-    # (α)
-    value = sorted_dict.pop("MissingNo.", None)
-    print(value)
-
-    # (β)
-    value = sorted_dict.get("MissingNo.")
-    print(value)

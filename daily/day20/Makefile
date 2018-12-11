@@ -3,7 +3,7 @@ help:
 # TODO: init, runについてドキュメンテーションを実装.
 
 init:
-# TODO: imageをbuildするコマンドを実装.
+# TODO: カレントディレクトリをcontextの対象とし, imageをbuildするコマンドを実装.
 # imageの名前はday20とする.
 
 run:

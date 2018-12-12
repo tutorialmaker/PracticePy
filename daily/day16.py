@@ -45,7 +45,7 @@ class Matrix(list):
     @property
     def shape(self):
         # TODO: ドキュメンテーションを追記
-        return self.__shape
+        return self._shape
 
     def getT(self):
         """

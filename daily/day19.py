@@ -159,3 +159,6 @@ if __name__ == "__main__":
         実行するコードを実装する.
 
     """
+    # サンプルコード
+    # mycard = BingoCard()
+    # print(mycard)

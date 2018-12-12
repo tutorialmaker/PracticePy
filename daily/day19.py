@@ -60,7 +60,7 @@
 import random
 
 
-class _Count:
+class _StampedNumberCounter:
     """
     各行, 列および対角上でスタンプされた番号の総数を記録する.
     """
@@ -72,7 +72,7 @@ class _Count:
         self.col = dict(zip(range(size), [0]*size))
         self.diag = {0: 0, 1: 0}
 
-    def filled(self, i, j):
+    def count(self, i, j):
         """i行j列の番号がスタンプされたことを記録する."""
         self.row[i] += 1
         self.col[j] += 1
@@ -96,7 +96,7 @@ class BingoCard:
         カードが含む数字の最小値
 
     """
-    __slots__ = '_filled', '_count', '_squares', '_digit'
+    __slots__ = '_stamp', '_counter', '_squares', '_digit'
 
     def __init__(self, size=5, high=75, low=1):
         if size % 2 == 0:
@@ -104,16 +104,16 @@ class BingoCard:
         elif high - low < size ** 2 - 1:
             low, high = 1, size ** 2
 
-        self._filled = float('nan')
+        self._stamp = float('nan')
         self._digit = len(str(high))
         values = list(range(low, high))
         random.shuffle(values)
         center = int(size/2)
         around = int(size**2/2)
-        values = values[:around] + [self._filled] + values[around:]
+        values = values[:around] + [self._stamp] + values[around:]
         self._squares = [values[size*p:size*(p+1)] for p in range(size)]
-        self._count = _Count(size)
-        self._count.filled(center, center)
+        self._counter = _StampedNumberCounter(size)
+        self._counter.count(center, center)
 
     def stamped(self, num):
         """引数の番号がカードにあるならば, 番号をスタンプする."""
@@ -122,13 +122,13 @@ class BingoCard:
         for i in range(size):
             for j in range(size):
                 if squares[i][j] == num:
-                    squares[i][j] = self._filled
-                    self._count.filled(i, j)
+                    squares[i][j] = self._stamp
+                    self._counter.count(i, j)
 
     @property
     def count(self):
         """各行, 列および対角上でスタンプされた番号の総数を返す."""
-        count = self._count
+        count = self._counter
         report = {'row': count.row,
                   'col': count.col,
                   'diag': count.diag}

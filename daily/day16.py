@@ -8,7 +8,8 @@ from reprlib import recursive_repr
 
 
 class Matrix(list):
-    """行列
+    """
+    行列
 
     Parameters
     ----------

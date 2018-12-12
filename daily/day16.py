@@ -18,24 +18,24 @@ class Matrix(list):
     def __init__(self, M):
         super().__init__(M)
 
-        rowlengths = []
+        row_length_list = []
         for i, row in enumerate(self):
             if not hasattr(row, "__iter__"):
                 raise TypeError(f"{type(row)} object is not iterable")
             elif not isinstance(row, list):
                 self[i] = row = list(row)
 
-            rowlengths.append(len(row))
+            row_length_list.append(len(row))
             for e in row:
                 if not isinstance(e, Number):
                     raise TypeError(
                         f"Matrix element must be a Number, not {type(e)}")
 
-        rlen = max(rowlengths)
-        if rlen != min(rowlengths):
+        row_length = max(row_length_list)
+        if row_length != min(row_length_list):
             raise ValueError(f"unexpected Matrix shape")
-        clen = len(rowlengths)
-        self.__shape = (clen, rlen)
+        column_length = len(row_length_list)
+        self.__shape = (column_length, row_length)
 
     def __mul__(self, other):
         # TODO: 行列積の計算を実装

@@ -15,7 +15,7 @@ class Pokedex:
 
     @pokemons.setter
     def pokemons(self, value):
-        self._pokemons[value['game_indices'][0]['game_index']] = value
+        self._pokemons[value['id']] = value
 
     @pokemons.deleter
     def pokemons(self, key):

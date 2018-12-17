@@ -1,3 +1,5 @@
+from day5 import get_pokemon_data
+
 class Pokedex:
     """ポケモンの情報を格納する."""
     def __init__(self):
@@ -9,16 +11,25 @@ class Pokedex:
 
     @pokemons.getter
     def pokemons(self):
-        pass
+        return self._pokemons
 
     @pokemons.setter
-    def pokemons(self):
-        pass
+    def pokemons(self, value):
+        self._pokemons[value['game_indices'][0]['game_index']] = value
 
     @pokemons.deleter
-    def pokemons(self):
-        pass
+    def pokemons(self, key):
+        del self._pokemons[key]
 
+def main():
+    mypkd = Pokedex()
+    n10, n20 = 10, 20
+    mypkd.pokemons = get_pokemon_data(n10)
+    mypkd.pokemons = get_pokemon_data(n20)
+    pokemons = mypkd.pokemons
+    print(pokemons[n10]["name"])
+    del mypkd.pokemons[n10]
+    print(pokemons[n20]["name"])
 
 if __name__ == "__main__":
     """
@@ -50,3 +61,4 @@ if __name__ == "__main__":
     print(pokemons[n20]["name"])
 
     """
+    main()

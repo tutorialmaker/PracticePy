@@ -7,13 +7,13 @@ def o_or_x(fitzpatrick_scale):
     uni = [0x1F645, 0x1F646]
     color = [0x1F3FB, 0x1F3FC, 0x1F3FD, 0x1F3FE, 0x1F3FF]
 
-    if fitzpatrick_scale in range(6):
-        if fitzpatrick_scale in range(1, 6):
-            str_pic = chr(random.choice(uni)) + chr(color[fitzpatrick_scale-1])
-        else:
-            str_pic = chr(random.choice(uni))
+    if　not fitzpatrick_scale in range(6):
+        raise ValueError("The value input is invaild .")
+    elif fitzpatrick_scale == 0:
+        str_pic = chr(random.choice(uni))
     else:
-        raise ValueError("The value inputed is invaild .")
+        str_pic = chr(random.choice(uni)) + chr(color[fitzpatrick_scale-1])
+
     return str_pic
 
 

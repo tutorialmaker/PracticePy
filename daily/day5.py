@@ -31,7 +31,7 @@ def thresh(threshold, normal_dict):
     threshed = OrderedDict()
     for key, value in normal_dict.items():
         if value < threshold:
-            threshed[k] = value
+            threshed[key] = value
     return threshed
 
 
@@ -46,6 +46,7 @@ def main():
         pokemons[name] = bmi
     result = thresh(th, pokemons)
     print(dict(result))
+    print(dict(pokemon))
 
 
 if __name__ == "__main__":

@@ -5,7 +5,7 @@ def to_str(bytes):
     return str
 
 def o_or_x():
-    num = random.randrange(1)
+    num = random.randrange(2)
     if num == 1:
         return '\U0001F645'
     else:

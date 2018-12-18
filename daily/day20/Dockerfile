@@ -1,6 +1,9 @@
 # TODO: FROM命令でパブリックリポジトリからbase imageを取得.
 # base imageはpythonを使用し, tagは3.6を指定する.
 
+# TODO: LABEL命令でimageにメタデータを追加.
+# 追加するメタデータのキーは"maintainer", バリューは解答者の名前とする.
+
 # TODO: WORKDIR命令で作業ディレクトリをday20に指定.
 
 # TODO: COPY命令で作業ディレクトリにrequirements.txtをコピー.

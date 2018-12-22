@@ -8,18 +8,10 @@ def to_str(bytes):
 
 def o_or_x(fitzpatrick_scale):
     color = change_color(fitzpatrick_scale)
-    num = random.choice([0, 1])
-    if num == 1:
-        codepoint = '\U0001F645'
-    else:
-        codepoint = '\U0001F646'
-    if color is None:
-        codepoint = codepoint
-    else:
+    codepoint = random.choice(['\U0001F645', '\U0001F646'])
+    if color is not None:
         codepoint = codepoint + color
-    codepoint = codepoint.encode()
-    str = to_str(codepoint)
-    return str
+    return codepoint
 
 
 def change_color(num):

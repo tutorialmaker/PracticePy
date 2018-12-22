@@ -7,9 +7,8 @@ def to_str(bytes):
 
 
 def o_or_x(fitzpatrick_scale):
-    fitzpatrick_scale = num_checker(fitzpatrick_scale)
     color = change_color(fitzpatrick_scale)
-    num = random.randrange(2)
+    num = random.choice([0, 1])
     if num == 1:
         codepoint = '\U0001F645'
     else:
@@ -19,20 +18,17 @@ def o_or_x(fitzpatrick_scale):
     else:
         codepoint = codepoint + color
     codepoint = codepoint.encode()
-    return codepoint
+    str = to_str(codepoint)
+    return str
 
 
 def change_color(num):
+    if num not in range(1, 6):
+        raise ValueError('入力された値は,指定された範囲を超えているか、小数です.')
     list = [None, '\U0001F3FB', '\U0001F3FC',
             '\U0001F3FD', '\U0001F3FE', '\U0001F3FF']
     color = list[num]
     return color
-
-
-def num_checker(num):
-    if num < 0 or num > 5:
-        raise ValueError('入力された値は,指定された範囲を超えています.')
-    return num
 
 
 def main():
@@ -40,9 +36,8 @@ def main():
     print(str)
     print('0~5の範囲の整数を入力してください.')
     fitzpatrick_scale = int(input())
-
-    codepoint = o_or_x(fitzpatrick_scale)
-    print(to_str(codepoint))
+    str = o_or_x(fitzpatrick_scale)
+    print(str)
 
 
 if __name__ == "__main__":

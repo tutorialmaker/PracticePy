@@ -2,6 +2,10 @@ def invert_num(num: int) -> int:
     return num * -1
 
 
+def subtract_100(num: int) -> int:
+    return num - 100
+
+
 if __name__ == '__main__':
     nums = range(0, 10)
     print(list(nums))
@@ -35,16 +39,16 @@ if __name__ == '__main__':
     # 上記1, 2, 3, 4の方法に習い、それぞれ100を引いてみてください
     # ただしnum2の中身は変更しないようにしてください。
 
-    # nums_2 =
-    # print(list(nums))
+    nums_2 = range(30, 101)
+    print(list(nums))
 
-    # hundredfold_map_1 =
-    # hundredfold_map_2 =
-    # hundredfold_map_3 =
-    # hundredfold_map_4 =
+    hundredfold_map_1 = map(subtract_100, nums_2)
+    hundredfold_map_2 = map(lambda num: num - 100, nums_2)
+    hundredfold_map_3 = [num - 100 for num in nums_2]
+    hundredfold_map_4 = (num - 100 for num in nums_2)
 
-    # print(list(hundredfold_map_1))
-    # print(list(hundredfold_map_2))
-    # print(hundredfold_map_3)
-    # print(list(hundredfold_map_4))
-    # print(num_2)
+    print(list(hundredfold_map_1))
+    print(list(hundredfold_map_2))
+    print(hundredfold_map_3)
+    print(list(hundredfold_map_4))
+    print(nums_2)

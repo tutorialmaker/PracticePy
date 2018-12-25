@@ -44,10 +44,10 @@ PORT = 12345
 # -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
 
 # -*-*-*-*-*- インターネット層 -*-*-*-*-*-
-# プロトコルはIPv4(Internet Protocol version 4)を用いる.
-FAMILY = socket.AF_INET
+# プロトコルはIPv6(Internet Protocol version 6)を用いる.
+FAMILY = socket.AF_INET6
 # サーバのIPアドレスは127.0.0.1とする.
-HOST = "127.0.0.1"
+HOST = "localhost"
 # -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
 
 
@@ -74,10 +74,13 @@ if __name__ == '__main__':
                 # acceptメソッドを実行して接続済みのソケットを生成する.
                 conn, addr = s.accept()
                 print("\n-*-*-*- 接続済みのソケットを生成 -*-*-*-")
+                print(f"ソケットに割り当てられたポート番号", conn.getsockname()[1])
+                print(f"クライアントのIPアドレス : {addr[0]}\nクライアントのポート番号 : {addr[1]}")
                 with conn:
                     # recvメソッドを実行して接続先のソケットからデータを受信する.
                     data = conn.recv(2**3)
-                    if not data: break
+                    if not data:
+                        break
                     print(f"受信した符号 : {data}")
 
                     # sendメソッドを実行して接続先のソケットにデータを送信する.
@@ -88,9 +91,10 @@ if __name__ == '__main__':
 
         # -*-*- クライアントのソケットとして実行 -*-*-
         elif args.mode == "client":
-            print(f"クライアントのIPアドレス : {HOST}")
             # connectメソッドを実行して指定したアドレスが割り当てられたソケットに接続する.
             s.connect((HOST, PORT))
+            print(f"クライアントのIPアドレス : ", s.getsockname()[0])
+            print("エフェメラルポートのポート番号 : ", s.getsockname()[1])
             string = input("送信する文字列 > ")
             # 送信するために文字列をUTF-8でエンコードする.
             code = string.encode()
